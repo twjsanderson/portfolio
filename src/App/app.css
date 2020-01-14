@@ -1,0 +1,10 @@
+.main {
+    background-image: url(../assets/images/codeSnippet2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
+
+h1 {
+    z-index: 2;
+}
