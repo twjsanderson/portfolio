@@ -1,23 +1,4 @@
-/* .main {
-    background-image: url(../assets/images/codeSnippet2.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 900px;
+#main-title {
+    font-family: 'Crimson Text', serif;
+    font-size: 8rem;
 }
-
-h1 {
-    z-index: 2;
-} */
-
-.hero-img {
-    width: 100%;
-    height: 100%;
-}
-
-.overlay-div{
-    height: 100%;
-    width: 100%;
-    position: relative;
-    background-color: black;
-    opacity: 0.8;
- }

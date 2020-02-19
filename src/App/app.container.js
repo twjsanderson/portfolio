@@ -1,61 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Nav, Navbar, Container, Row, Col } from 'react-bootstrap';
 import './app.css';
+import Typist from 'react-typist';
 
-// images
-import codeSnippet from '../assets/images/codeSnippet2.png';
-import kaliImage from '../assets/images/kali1.png'
 
-function App() {
-  
+const App = () => {
+
   return (
     <section className="main">
-      
       <Navbar bg="dark" variant="dark">
-        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+        <Navbar.Brand href="#home">Tom Sanderson</Navbar.Brand>
         <Nav className="mr-auto">
           <Nav.Link href="#home">Home</Nav.Link>
           <Nav.Link href="#features">Features</Nav.Link>
           <Nav.Link href="#pricing">Pricing</Nav.Link>
         </Nav>
       </Navbar>
-
-      {/* <h1>Nav</h1>
-        <h1>Home</h1>
-        <h1>About Me</h1>
-        <h1>My Work</h1>
-        <h1>How I Create</h1>
-        <h1>Tutorials</h1>
-        <h1>Contact</h1>
-      <h1>Footer</h1> */}
-        <Row noGutters className='overlay-div'>
-          <Col md={6}>
-            <img 
-              src={kaliImage}
-              alt='gogo'
-              className='hero-img'
-            />
-          </Col>
-          <Col md={6}>
-          <img 
-              src={codeSnippet}
-              alt='dasd'
-              className='hero-img'
-            />
-          </Col>
-        </Row>
-            <div class="card-img-overlay d-flex align-items-center container">
-               <div class="row  mb-5">
-                  <div class=" col-sm-12 text-content">
-                     <h2 class="card-title ">
-                        Canada
-                     </h2>
-                     <button class="btn btn-primary">
-                        Viewl all Location
-                     </button>
-                  </div>
-               </div>
-         </div>
+      <Container fluid className='text-center'>
+          <Row>
+            <Col>
+              <Typist 
+                startDelay={1000} 
+                cursor={{ show: false }}
+                avgTypingDelay={200}
+              >
+                <h1>Tom Sanderson</h1>  
+                <Typist.Delay ms={1000} />
+                <h1 style={{ textIndent: '2.5em' }}>Web Developer</h1>
+                <Typist.Delay ms={1000} />
+                <span id='main-title' style={{ textIndent: '5em' }}>H@ck3r</span>
+                <Typist.Backspace count={5} delay={300} />
+                <span id='main-title' style={{ textIndent: '5em' }}>acker</span>
+              </Typist>
+            </Col>
+          </Row>
+        </Container>
+        <Container fluid className='h-100'>
+          <Row>
+            <Col>
+            {/* <h2>fnsjknfdksn;</h2> */}
+            </Col>
+          </Row>
+        </Container>
     </section>
   );
 }
