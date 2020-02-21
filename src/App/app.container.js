@@ -214,14 +214,16 @@ const App = () => {
               </Col>
             </Row>
             <Row className='m-3'>
-              <Col md={6} className='work-col'>
-                <img 
-                  src='https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png?raw=true'
-                  className='work-img rounded'
-                />
-                <div className='work-caption'>
-                  <h1 className='work-title'>Browser Power</h1>
-                  <p className='work-details'>dasddadfafs ddaDSAD</p>
+              <Col md={6}>
+                <div className='hover-effect'>
+                  <img 
+                    src='https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png?raw=true'
+                    className='img-fluid rounded'
+                  />
+                  <div className='overlay'>
+                    <h2>Browser Power</h2>
+                    <p>dasddadfafs ddaDSAD dns fhhf ksd;ak fnasdk fndsa nf dasnk ffdsf sfs</p>
+                  </div>
                 </div>
               </Col>
               </Row>
