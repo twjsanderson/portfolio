@@ -14,3 +14,73 @@
     font-size: 8rem;
     margin-top: -0.5rem;
 } 
+
+.main-icon {
+    margin: 1em;
+    font-size: 7em;
+}
+
+.main-icon:hover {
+    cursor: pointer;
+}
+
+.about-title {
+    font-size: 5rem;
+}
+
+.about-img {
+    height: auto;
+    width: 75%;
+}
+
+.about-cta {
+    /* needs custom css for the link */
+}
+
+@media (max-width: 1190px) { 
+    .main-container {
+        text-align: left;
+    }
+    .main-title {
+        font-size: 5rem;
+    }
+    
+    .main-type {
+        font-family: 'Crimson Text', serif;
+        font-size: 5rem;
+    }
+    
+    .main-retype {
+        font-family: 'Crimson Text', serif;
+        font-size: 5rem;
+    } 
+
+    .main-icon {
+        margin: 1em;
+        font-size: 5em;
+    }
+}
+
+@media (max-width: 769px) { 
+    .main-container {
+        text-align: left;
+    }
+    .main-title {
+        font-size: 3rem;
+    }
+    
+    .main-type {
+        font-family: 'Crimson Text', serif;
+        font-size: 3rem;
+    }
+    
+    .main-retype {
+        font-family: 'Crimson Text', serif;
+        font-size: 3rem;
+    } 
+
+    .main-icon {
+        margin: 1em;
+        font-size: 3em;
+    }
+}
