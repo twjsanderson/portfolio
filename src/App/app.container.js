@@ -57,18 +57,18 @@ const App = () => {
           <Row>
             <Col>
               <Typist 
-                startDelay={800} 
+                startDelay={300} 
                 cursor={{ show: false }}
-                avgTypingDelay={150}
+                avgTypingDelay={100}
               >
               <Col className='p-3 h-100 d-flex justify-content-center'>
                 <h1 className='main-title'>Tom Sanderson</h1>  
               </Col>
-              <Typist.Delay ms={800} />
+              <Typist.Delay ms={500} />
               <Col className='p-3 h-100 d-flex justify-content-center'>
                 <h1 className='main-title' style={{ textIndent: '2.5em' }}>Web Developer</h1>
               </Col>
-              <Typist.Delay ms={800} />
+              <Typist.Delay ms={500} />
               <Col className='h-100 d-flex justify-content-center'>
                 <span className='main-type'>H@ck3r</span>
                 <Typist.Backspace count={5} delay={150} />
@@ -88,7 +88,7 @@ const App = () => {
           </Row>
         </Container>
         </section>
-        
+
         <section id='about'>
         <Container className=''>
           <Row className='text-center'>
@@ -207,15 +207,22 @@ const App = () => {
                 })
               }
         </Container>
-        <Container style={{ height: 400 }}>
+        <Container className='p-4'>
             <Row className='text-center'>
               <Col>
                 <h1 className='p-3'>My Work</h1>
               </Col>
             </Row>
-            <Row>
-              <Col md={3}>
-              
+            <Row className='m-3'>
+              <Col md={6} className='work-col'>
+                <img 
+                  src='https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png?raw=true'
+                  className='work-img rounded'
+                />
+                <div className='work-caption'>
+                  <h1 className='work-title'>Browser Power</h1>
+                  <p className='work-details'>dasddadfafs ddaDSAD</p>
+                </div>
               </Col>
               </Row>
         </Container>

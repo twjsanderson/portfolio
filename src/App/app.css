@@ -84,3 +84,31 @@
         font-size: 3em;
     }
 }
+
+.work-col {
+    cursor: pointer;
+}
+
+.work-col:hover > .work-img {
+    opacity: 0.3;
+}
+
+.work-col:hover > .work-caption {
+    visibility: visible;
+}
+
+.work-img {
+    width: 100%;
+    height: auto;
+    opacity: 1;
+    transition: opacity 0.4s;
+}
+
+.work-caption {
+    text-align: center;
+    margin-top: -35%;
+    visibility: hidden;
+    transition: visibility 0.4s;
+}
+
+
