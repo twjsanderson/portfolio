@@ -18,14 +18,11 @@ const skills = [
   { type: 'language', name: 'HTML', value: '80' },
   { type: 'language', name: 'CSS', value: '75' },
   { type: 'language', name: 'JavaScript', value: '80' },
-  { type: 'language', name: 'Python', value: '40' },
-  { type: 'language', name: 'Ruby', value: '30' },
-  { type: 'language', name: 'Solidity', value: '20' },
+  { type: 'learning', name: 'Python', value: '40' },
+  { type: 'learning', name: 'Solidity', value: '20' },
   { type: 'framework', name: 'React', value: '75' },
-  { type: 'framework', name: 'Angular', value: '35' },
   { type: 'framework', name: 'Node.js', value: '60' },
-  { type: 'framework', name: 'Ruby On Rails', value: '30' },
-  { type: 'database', name: 'SQL', value: '35' },
+  { type: 'database', name: 'SQL', value: '40' },
   { type: 'database', name: 'MongoDB', value: '70' },
   { type: 'versioning', name: 'Git', value: '75' },
   { type: 'devops', name: 'Firebase', value: '70' },
@@ -44,15 +41,20 @@ const App = () => {
 
   return (
     <>
-    <section id='main'>
-      <Navbar bg='dark' variant='dark'>
-        <Navbar.Brand href='#home'>Tom Sanderson</Navbar.Brand>
-        <Nav className='mr-auto'>
-          <Nav.Link href='#home'>Home</Nav.Link>
-          <Nav.Link href='#features'>Features</Nav.Link>
-          <Nav.Link href='#pricing'>Pricing</Nav.Link>
-        </Nav>
-      </Navbar>
+      <section id='navigation'>
+        <Navbar className='nav-container'>
+          <Navbar.Brand>Tom Sanderson</Navbar.Brand>
+          <Nav className='ml-auto'>
+            <Nav.Link>About Me</Nav.Link>
+            <Nav.Link>What I Do</Nav.Link>
+            <Nav.Link>Projects</Nav.Link>
+            <Nav.Link>My Clients</Nav.Link>
+            <Nav.Link>Contact</Nav.Link>
+          </Nav>
+        </Navbar>
+      </section>
+
+      <section id='main'>
       <Container fluid className='main-container'>
           <Row>
             <Col>
@@ -62,26 +64,27 @@ const App = () => {
                 avgTypingDelay={100}
               >
               <Col className='p-3 h-100 d-flex justify-content-center'>
-                <h1 className='main-title'>Tom Sanderson</h1>  
+                <h1 className='main-title'>Tom Sanderson.</h1>  
               </Col>
               <Typist.Delay ms={500} />
               <Col className='p-3 h-100 d-flex justify-content-center'>
-                <h1 className='main-title' style={{ textIndent: '2.5em' }}>Web Developer</h1>
+                <h1 className='main-title' style={{ textIndent: '2.5em' }}>Web Developer.</h1>
               </Col>
               <Typist.Delay ms={500} />
               <Col className='h-100 d-flex justify-content-center'>
-                <span className='main-type'>H@ck3r</span>
-                <Typist.Backspace count={5} delay={150} />
-                <span className='main-retype'>acker</span>
+                <span className='main-type'>H@ck3r.</span>
+                <Typist.Backspace count={6} delay={150} />
+                <span className='main-retype'>acker.</span>
               </Col>
               </Typist>
             </Col>
           </Row>
         </Container>
+
         <Container fluid className='h-100'>
           <Row className='h-100'>
             <Col className='h-100 d-flex justify-content-center'>
-              <Anime rotateX={360} delay={9300} duration={5000}>
+              <Anime rotateX={360} delay={7000} duration={5000}>
                 <FontAwesomeIcon onClick={() => scrollToElement()} icon={faChevronDown} className='main-icon' />
               </Anime>
             </Col>
@@ -109,7 +112,7 @@ const App = () => {
             </Col>
             <Col md={6}>
               <h1 className='p-2'>
-                Full-Time Web Developer. Part-Time Hacker.
+                Full-Time Web Developer Part-Time Hacker
               </h1>
                 <h2 className='p-2'>
                   Whether I am designing a custom landing page, building an API integration or testing the 
@@ -126,10 +129,9 @@ const App = () => {
           </Container>
           </section>
 
-          <Container className='pt-5 text-center'>
-            <h1>My Technical Skills</h1>
-          </Container>
-          <Container className=''>
+          <section id='skills'>
+          <Container className='p-5'>
+              <h1 className='skills-title text-center'>Technical Skills.</h1>
               <h1 className='pt-5 pb-3'>Languages/Scripts</h1>
               {
                 skills.map(item => {
@@ -168,7 +170,7 @@ const App = () => {
                   return null;
                 })
               }
-              <h1 className='pt-5 pb-3'>Database/Versioning</h1>
+              <h1 className='pt-5 pb-3'>Databases/Versioning</h1>
               {
                 skills.map(item => {
                   if (item.type === 'database' || item.type === 'versioning') {
@@ -206,28 +208,57 @@ const App = () => {
                   return null;
                 })
               }
+              <h1 className='pt-5 pb-3'>What I'm Learning Right Now</h1>
+              {
+                skills.map(item => {
+                  if (item.type === 'learning') { 
+                    return <Row key={item.name} className='h-100 d-flex justify-content-center align-items-center'>
+                      <Col md={2} className='pt-2'>
+                        <h4>{item.name}</h4>
+                      </Col>
+                      <Col md={8}>
+                        <ProgressBar variant='dark' now={item.value} /> 
+                      </Col>
+                      <Col md={2} className='pt-2'>
+                        <h4>{item.value}%</h4>
+                      </Col>
+                    </Row>
+                  }
+                  return null;
+                })
+              }
         </Container>
-        <Container className='p-4'>
-            <Row className='text-center'>
-              <Col>
-                <h1 className='p-3'>My Work</h1>
-              </Col>
-            </Row>
-            <Row className='m-3'>
-              <Col md={6}>
-                <div className='hover-effect'>
-                  <img 
-                    src='https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png?raw=true'
-                    className='img-fluid rounded'
-                  />
-                  <div className='overlay'>
-                    <h2>Browser Power</h2>
-                    <p>dasddadfafs ddaDSAD dns fhhf ksd;ak fnasdk fndsa nf dasnk ffdsf sfs</p>
-                  </div>
-                </div>
-              </Col>
+        </section>
+            
+        <section id='work'>
+          <Container className='p-4'>
+              <Row className='text-center'>
+                <Col>
+                  <h1 className='p-3'>My Work</h1>
+                </Col>
               </Row>
-        </Container>
+              <Row className='m-3'>
+                <Col md={6}>
+                  <a href='https://browser-power.firebaseapp.com/'>
+                  <div className='hover-effect rounded'>
+                    <img 
+                      src='https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png?raw=true'
+                      className='img-fluid rounded'
+                    />
+                    <div className='overlay'>
+                      <h2>Browser Power</h2>
+                      <p>A free educational tool designed to teach people how developers and hackers use web browsers to access their private data.</p>
+                    </div>
+                  </div>
+                  </a>
+                </Col>
+              </Row>
+          </Container>
+        </section>
+
+        <section id=''>
+
+        </section>
         </>
   );
 }

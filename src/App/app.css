@@ -1,3 +1,24 @@
+.nav-container {
+    background-color: black;
+}
+
+.navbar-brand {
+    font-family: 'Crimson Text', serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    color: white !important;
+}
+
+.nav-link {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 1.3rem;
+    color: white !important;
+}
+
+.main-container {
+    height: 40em;
+}
+
 .main-title {
     font-size: 8rem;
 }
@@ -36,6 +57,19 @@
 .about-cta {
     /* needs custom css for the link */
 }
+
+#skills {
+    background-color: rgb(224, 222, 211);
+}
+
+#skills .progress {
+    background-color: white;
+}
+
+.skills-title {
+    font-size: 5rem;
+}
+
 
 @media (max-width: 1190px) { 
     .main-container {
@@ -92,7 +126,10 @@
     overflow: hidden;
     position: relative;
     text-align: center;
-    cursor: default;
+    cursor: pointer;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   }
   
   .hover-effect .overlay {
@@ -128,18 +165,19 @@
   
   .hover-effect:hover img {
     filter: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg"><filter id="filter"><feComponentTransfer color-interpolation-filters="sRGB"><feFuncR type="linear" slope="0.6" /><feFuncG type="linear" slope="0.6" /><feFuncB type="linear" slope="0.6" /></feComponentTransfer></filter></svg>#filter');
-    filter: brightness(0.6);
-    -webkit-filter: brightness(0.6);
+    filter: brightness(0.3);
+    -webkit-filter: brightness(0.3);
   }
   
   .hover-effect h2 {
     text-transform: uppercase;
     text-align: center;
     position: relative;
-    font-size: 17px;
+    font-size: 2rem;
+    font-family: 'Crimson Text', serif;
     background-color: transparent;
     color: #FFF;
-    padding: 1em 0;
+    padding: 0.5em 0;
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
@@ -150,7 +188,7 @@
   
   .hover-effect a, .hover-effect p {
     color: #FFF;
-    padding: 1em 0;
+    padding: 0.5em 0;
     opacity: 0;
     filter: alpha(opacity=0);
     -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
