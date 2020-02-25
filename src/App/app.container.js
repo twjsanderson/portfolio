@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { Nav, Navbar, Container, Row, Col, ProgressBar } from 'react-bootstrap';
+import React from 'react';
+import { Nav, Navbar, Container, Row, Col, ProgressBar, Button } from 'react-bootstrap';
 import './app.css';
 import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -7,8 +7,10 @@ import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 // import { Link } from 'react-router-dom';
 // eslint-disable-next-line
 import * as Scroll from 'react-scroll';
+// eslint-disable-next-line
 import { Element, animateScroll as scroll, scroller } from 'react-scroll'
 import Anime from 'react-anime';
+import jsPDF from 'jspdf';
  
 
 // images
@@ -30,13 +32,19 @@ const skills = [
 ];
 
 const App = () => {
-  const [show, setShow] = useState('main-no-show');
 
   const scrollToElement = () => {
     scroller.scrollTo('aboutElement', {
       duration: 1000,
       smooth: true
     })
+  };
+
+  const pdfGenerator = () => {
+    const doc = new jsPDF('p', 'pt');
+
+    doc.text(20, 20, 'testing dnk fns ');
+    doc.save('Tom_Sanderson_Resume.pdf');
   };
 
   return (
@@ -46,10 +54,11 @@ const App = () => {
           <Navbar.Brand>Tom Sanderson</Navbar.Brand>
           <Nav className='ml-auto'>
             <Nav.Link>About Me</Nav.Link>
-            <Nav.Link>What I Do</Nav.Link>
-            <Nav.Link>Projects</Nav.Link>
-            <Nav.Link>My Clients</Nav.Link>
-            <Nav.Link>Contact</Nav.Link>
+            <Nav.Link>My Skills</Nav.Link>
+            <Nav.Link>Recent Projects</Nav.Link>
+            <Nav.Link>Experience</Nav.Link>
+            <Nav.Link>Articles</Nav.Link>
+            <Nav.Link>Contact Me</Nav.Link>
           </Nav>
         </Navbar>
       </section>
@@ -234,7 +243,7 @@ const App = () => {
           <Container className='p-4'>
               <Row className='text-center'>
                 <Col>
-                  <h1 className='p-3'>My Work</h1>
+                  <h1 className='work-title p-3'>My Work.</h1>
                 </Col>
               </Row>
               <Row className='m-3'>
@@ -244,6 +253,7 @@ const App = () => {
                     <img 
                       src='https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png?raw=true'
                       className='img-fluid rounded'
+                      alt='browser power project home page'
                     />
                     <div className='overlay'>
                       <h2>Browser Power</h2>
@@ -256,8 +266,46 @@ const App = () => {
           </Container>
         </section>
 
-        <section id=''>
-
+        <section id='experience'>
+              <Container>
+                <Row className='text-center'>
+                  <Col>
+                    <h1 className='text-center p-3 experience-title'>My Experience.</h1>
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <h2>Freelance Web Developer</h2>
+                    <h3>Sep. 2019 - Present</h3>
+                    <p>
+                      I build stand alone websites and applications for clients from around the world. Using React, Node.js and Firebase I 
+                      build extensible, fully customized platforms for e-commerce and service based businesses. I also consult for start ups
+                      looking to build out their digital infrastructure and automate critical operations. Lastly, I provide SEO assessments and 
+                      security evaluations for growing e-commerce platforms. 
+                    </p>
+                  </Col>
+                  <Col>
+                    <h2>ZenduIT - Junior Developer</h2>
+                    <h3>Feb. 2019 - Sep. 2019</h3>
+                    <p>
+                      As a junior developer I was tasked with building unit tests for legacy codebases and pre-production applications. I also 
+                      worked on fixing bugs in production applications passed down from the support department. I was given the opportunity to 
+                      build an API integration from scratch using Node.js and Typescript. The application was a stand alone server that connecting 
+                      realtime data feeds from emergency vehicles to a virtual client dashboard. I deployed the application on Google Cloud Services
+                      Platform using App Engine. 
+                    </p>
+                  </Col>
+                </Row>
+                <Row className='text-center'>
+                  <Col>
+                    <Button
+                      onClick={() => pdfGenerator()}
+                    >
+                      Download My Resume
+                    </Button>
+                  </Col>
+                </Row>
+              </Container>
         </section>
         </>
   );
