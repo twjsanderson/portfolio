@@ -1,20 +1,22 @@
-import React from 'react';
-import { Nav, Navbar, Container, Row, Col, ProgressBar, Button } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Nav, Navbar, Container, Row, Col, ProgressBar, Button, Form } from 'react-bootstrap';
 import './app.css';
+import Axios from 'axios';
 import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+import { faChevronDown, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 // import { Link } from 'react-router-dom';
 // eslint-disable-next-line
 import * as Scroll from 'react-scroll';
 // eslint-disable-next-line
 import { Element, animateScroll as scroll, scroller } from 'react-scroll'
 import Anime from 'react-anime';
-import jsPDF from 'jspdf';
  
-
 // images
 import portfolio from '../assets/images/profile.jpg';
+
+// resume
+import pdf from '../assets/Tom_Resume.pdf';
 
 const skills = [
   { type: 'language', name: 'HTML', value: '80' },
@@ -32,6 +34,30 @@ const skills = [
 ];
 
 const App = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+  const [error, setError] = useState(null);
+  const [success, setSuccess] = useState(null);
+
+  const handleSubmit = event => {
+      event.preventDefault();
+      const data = { email, message };
+    
+      Axios.post('need firebase function here', data).catch(error => {
+        if (error) { 
+          setError(error);
+        }
+      });
+
+      if (error) {
+          setSuccess(false)
+      } else {
+          setSuccess(true);
+          setEmail('');
+          setMessage('');
+      }
+
+  };
 
   const scrollToElement = () => {
     scroller.scrollTo('aboutElement', {
@@ -40,25 +66,18 @@ const App = () => {
     })
   };
 
-  const pdfGenerator = () => {
-    const doc = new jsPDF('p', 'pt');
-
-    doc.text(20, 20, 'testing dnk fns ');
-    doc.save('Tom_Sanderson_Resume.pdf');
-  };
-
   return (
     <>
       <section id='navigation'>
         <Navbar className='nav-container'>
           <Navbar.Brand>Tom Sanderson</Navbar.Brand>
           <Nav className='ml-auto'>
-            <Nav.Link>About Me</Nav.Link>
+            <Nav.Link>About</Nav.Link>
             <Nav.Link>My Skills</Nav.Link>
-            <Nav.Link>Recent Projects</Nav.Link>
+            <Nav.Link>Projects</Nav.Link>
             <Nav.Link>Experience</Nav.Link>
-            <Nav.Link>Articles</Nav.Link>
-            <Nav.Link>Contact Me</Nav.Link>
+            <Nav.Link>Publications</Nav.Link>
+            <Nav.Link>Contact</Nav.Link>
           </Nav>
         </Navbar>
       </section>
@@ -243,7 +262,7 @@ const App = () => {
           <Container className='p-4'>
               <Row className='text-center'>
                 <Col>
-                  <h1 className='work-title p-3'>My Work.</h1>
+                  <h1 className='work-title p-3'>Projects.</h1>
                 </Col>
               </Row>
               <Row className='m-3'>
@@ -270,10 +289,10 @@ const App = () => {
               <Container>
                 <Row className='text-center'>
                   <Col>
-                    <h1 className='text-center p-3 experience-title'>My Experience.</h1>
+                    <h1 className='p-3 experience-title'>Experience.</h1>
                   </Col>
                 </Row>
-                <Row>
+                <Row className='p-3'>
                   <Col>
                     <h2>Freelance Web Developer</h2>
                     <h3>Sep. 2019 - Present</h3>
@@ -281,9 +300,11 @@ const App = () => {
                       I build stand alone websites and applications for clients from around the world. Using React, Node.js and Firebase I 
                       build extensible, fully customized platforms for e-commerce and service based businesses. I also consult for start ups
                       looking to build out their digital infrastructure and automate critical operations. Lastly, I provide SEO assessments and 
-                      security evaluations for growing e-commerce platforms. 
+                      security evaluations for growing e-commerce companies. 
                     </p>
                   </Col>
+                </Row>
+                <Row className='p-3'>
                   <Col>
                     <h2>ZenduIT - Junior Developer</h2>
                     <h3>Feb. 2019 - Sep. 2019</h3>
@@ -299,13 +320,131 @@ const App = () => {
                 <Row className='text-center'>
                   <Col>
                     <Button
-                      onClick={() => pdfGenerator()}
+                      href={pdf}
+                      target='_blank'
                     >
-                      Download My Resume
+                      My Resume
                     </Button>
                   </Col>
                 </Row>
               </Container>
+        </section>
+
+        <section id='publications'>
+          <Container>
+            <Row className='p-3 text-center'>
+              <Col>
+                <h1 className='publications-title'>Publications.</h1>
+              </Col>
+            </Row>
+            <Row className='m-3'>
+              <Col md={6}>
+                <a href='https://medium.com/@tom.w.j.sanderson/a-practical-guide-to-technical-tests-for-junior-devs-part-1-7890b5689c0'>
+                <div className='hover-effect rounded'>
+                  <img 
+                    src='https://miro.medium.com/max/6016/0*qmElKbRUIq2D7mFx'
+                    className='img-fluid rounded'
+                    alt=''
+                  />
+                  <div className='overlay'>
+                    <h2>A Practical Guide to Technical Tests (For Junior Devs): Part I</h2>
+                    <p>
+                      The first part of a series on Medium.com that teaches junior developers how to solve technical tests and approach coding problems. 
+                    </p>
+                  </div>
+                </div>
+                </a>
+              </Col>
+            </Row>
+          </Container>
+        </section>
+
+        <section id='contact'>
+          <Container>
+            <Row className='text-center'>
+              <Col>
+                <h1 className='contact-title'>Contact.</h1>
+                <h2>Have some questions or a project you want me to work on? <br />Send me a message and let's chat.</h2>
+              </Col>
+            </Row>
+            <Row>
+              <Col className='d-flex align-items-center justify-content-center'>
+                <Form 
+                  onSubmit={(e) => handleSubmit(e)}
+                >
+                  <Row className='p-3'>
+                    <Col className=''>
+                      <label>
+                          <h3>Email</h3>
+                          <input 
+                              required
+                              type='email' 
+                              name='email' 
+                              size='70'
+                              value={email} 
+                              onChange={e => setEmail(e.target.value)} 
+                          />
+                      </label>
+                    </Col>
+                  </Row>
+                  <Row className='p-3'>
+                    <Col>
+                      <label>
+                        <h3>Message</h3>
+                        <textarea
+                            required
+                            rows='7' 
+                            cols='70'
+                            type='text' 
+                            name='message' 
+                            value={message} 
+                            onChange={e => setMessage(e.target.value)} 
+                        />
+                      </label>
+                      <br />
+                      <input 
+                          className='rounded'
+                          type='submit' 
+                          value='submit' 
+                      />
+                      {
+                        error && success === false ? 
+                            <h5 className='text-red p-2'>
+                                <FontAwesomeIcon 
+                                    icon={faTimesCircle} 
+                                    color='red' 
+                                /> 
+                                Oops looks like there was an error. Please try again.
+                            </h5> 
+                            : success === true ?
+                                <h5 className='text-green p-2'>
+                                    <FontAwesomeIcon 
+                                        icon={faCheckCircle} 
+                                        color='green' 
+                                    /> 
+                                    Success! Your message was sent.
+                                </h5> 
+                                : null
+                      }
+                    </Col>
+                  </Row>
+                </Form>
+              </Col>
+            </Row>
+          </Container>      
+        </section>
+
+        <section id='footer'>
+          <Navbar className='nav-container'>
+            <Nav className='m-auto'>
+              <Nav.Link>About</Nav.Link>
+              <Nav.Link>My Skills</Nav.Link>
+              <Nav.Link>Projects</Nav.Link>
+              <Nav.Link>Experience</Nav.Link>
+              <Nav.Link>Publications</Nav.Link>
+              <Nav.Link>Contact</Nav.Link>
+            </Nav>
+          </Navbar>
         </section>
         </>
   );

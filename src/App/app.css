@@ -210,9 +210,25 @@
 
 
 #experience {
-
+    background-color: rgb(224, 222, 211);
 }
 
 .experience-title {
+    font-size: 5rem;
+}
+
+#publications {
+
+}
+
+.publications-title {
+    font-size: 5rem;;
+}
+
+#contact {
+
+}
+
+.contact-title {
     font-size: 5rem;
 }
