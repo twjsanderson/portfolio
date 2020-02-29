@@ -54,10 +54,6 @@
     width: 75%;
 }
 
-.about-cta {
-    /* needs custom css for the link */
-}
-
 #skills {
     background-color: rgb(224, 222, 211);
 }
@@ -66,9 +62,15 @@
     background-color: white;
 }
 
+#skills h4 {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
 .skills-title {
     font-size: 5rem;
 }
+
+
 
 
 @media (max-width: 1190px) { 
@@ -119,9 +121,22 @@
     }
 }
 
+#about {
+    min-height: 60em;
+}
+
+#work {
+    height: 50em; 
+}
+
 .work-title {
     font-size: 5rem;
 }
+
+#skills {
+    padding-bottom: 10%;
+}
+
 
 .hover-effect {
     width: 100%;
@@ -136,7 +151,7 @@
     box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
   }
   
-  .hover-effect .overlay {
+.hover-effect .overlay {
     position: absolute;
     overflow: hidden;
     width: 80%;
@@ -213,20 +228,98 @@
     background-color: rgb(224, 222, 211);
 }
 
+#experience h4 {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.experience-row {
+    background-color: rgb(70, 70, 68);
+}
+
+.experience-hover {
+    background-color: white;
+    width: 45%;
+    color: black;
+    margin-top: -50px;
+    -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.experience-hover h2 {
+    font-weight: bold;
+}
+
 .experience-title {
     font-size: 5rem;
 }
 
-#publications {
-
+.experience-text {
+    font-size: 1.3rem;
+    color: white;
+    font-family: 'Nanum Myeongjo', serif;
 }
 
-.publications-title {
+.experience-button {
+    background-color: white;
+    color: black;
+    border: solid 2px black;
+    font-size: 1.6rem;
+    font-family: 'Crimson Text', serif;
+}
+
+.experience-button:hover {
+    background-color: black;
+    color: white;
+    border: solid 2px white;
+}
+
+.experience-button:active {
+    color: black !important;
+    background-color: white !important;
+    border-color: white !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.experience-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.experience-link {
+    font-size: 1.4rem;
+    font-family: 'Nanum Myeongjo', serif;
+    transition: font-size 0.2s ease-in-out;
+}
+
+.experience-link:hover {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    text-decoration: underline;
+}
+
+.experience-icon {
+    font-size: 2em;
+}
+
+#writing {
+    min-height: 50em;
+}
+
+.writing-title {
     font-size: 5rem;;
 }
 
-#contact {
+.writing-text {
+    font-family: 'Nanum Myeongjo', serif;
+    font-size: 2rem;
+}
 
+#contact {
+    min-height: 50em;
+    background-color: rgb(224, 222, 211);
 }
 
 .contact-title {

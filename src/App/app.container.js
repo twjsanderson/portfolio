@@ -5,6 +5,7 @@ import Axios from 'axios';
 import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
+import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
 // import { Link } from 'react-router-dom';
 // eslint-disable-next-line
 import * as Scroll from 'react-scroll';
@@ -76,7 +77,7 @@ const App = () => {
             <Nav.Link>My Skills</Nav.Link>
             <Nav.Link>Projects</Nav.Link>
             <Nav.Link>Experience</Nav.Link>
-            <Nav.Link>Publications</Nav.Link>
+            <Nav.Link>Writing</Nav.Link>
             <Nav.Link>Contact</Nav.Link>
           </Nav>
         </Navbar>
@@ -121,16 +122,16 @@ const App = () => {
         </section>
 
         <section id='about'>
-        <Container className=''>
+        <Container className='p-5'>
           <Row className='text-center'>
             <Col>
-            <Element name="aboutElement" />
-              <h1 className='about-title p-3'>
+            <Element name='aboutElement' />
+              <h1 className='about-title p-5'>
                 Hi, I'm Tom. 
               </h1>
             </Col>
           </Row>
-          <Row className='p-4 text-center'>
+          <Row className='p-3 text-center'>
             <Col md={6} className=''>
               <img
                 src={portfolio}
@@ -139,8 +140,8 @@ const App = () => {
               />
             </Col>
             <Col md={6}>
-              <h1 className='p-2'>
-                Full-Time Web Developer Part-Time Hacker
+              <h1 className='pb-3 pt-1'>
+                Full Stack Web Developer based in Toronto, Canada
               </h1>
                 <h2 className='p-2'>
                   Whether I am designing a custom landing page, building an API integration or testing the 
@@ -149,17 +150,19 @@ const App = () => {
                 <h2 className='p-2'>
                   Have a problem that needs to be solved?
                 </h2>
-                <h2 className='p-2'>
-                 <a href='www.google.ca' className='about-cta'><strong>Let's talk.</strong></a>
-                </h2>
+                  <Button
+                    className='experience-button m-3'
+                  >
+                    Let's Chat
+                  </Button>
             </Col>
           </Row>
           </Container>
           </section>
 
           <section id='skills'>
-          <Container className='p-5'>
-              <h1 className='skills-title text-center'>Technical Skills.</h1>
+            <Container className='pt-5'>
+              <h1 className='skills-title text-center pt-4 pb-2'>Technical Skills.</h1>
               <h1 className='pt-5 pb-3'>Languages/Scripts</h1>
               {
                 skills.map(item => {
@@ -259,20 +262,20 @@ const App = () => {
         </section>
             
         <section id='work'>
-          <Container className='p-4'>
+          <Container className='p-5'>
               <Row className='text-center'>
                 <Col>
-                  <h1 className='work-title p-3'>Projects.</h1>
+                  <h1 className='work-title p-3'>My Work.</h1>
                 </Col>
               </Row>
-              <Row className='m-3'>
+              <Row className='m-5'>
                 <Col md={6}>
                   <a href='https://browser-power.firebaseapp.com/'>
                   <div className='hover-effect rounded'>
                     <img 
                       src='https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png?raw=true'
                       className='img-fluid rounded'
-                      alt='browser power project home page'
+                      alt='browser power home page'
                     />
                     <div className='overlay'>
                       <h2>Browser Power</h2>
@@ -282,38 +285,44 @@ const App = () => {
                   </a>
                 </Col>
               </Row>
+              <Row className='text-center d-flex justify-content-center'>
+                <Col className='m-5 p-4' md={5}>
+                  <a><p className='experience-link'>Checkout my code on Github</p></a>
+                </Col>
+              </Row>
           </Container>
         </section>
 
         <section id='experience'>
               <Container>
-                <Row className='text-center'>
+                <Row className='text-center p-5'>
                   <Col>
-                    <h1 className='p-3 experience-title'>Experience.</h1>
+                    <h1 className='p-3 experience-title'>Resume.</h1>
                   </Col>
                 </Row>
-                <Row className='p-3'>
-                  <Col>
-                    <h2>Freelance Web Developer</h2>
-                    <h3>Sep. 2019 - Present</h3>
-                    <p>
-                      I build stand alone websites and applications for clients from around the world. Using React, Node.js and Firebase I 
+                <Row className='experience-row p-3 m-5 rounded'>
+                  <Col className='experience-col'>
+                    <div className='experience-hover p-2 rounded'>
+                      <h2>Freelance Web Developer</h2>
+                      <h4>Sep. 2019 - Present</h4>
+                    </div>
+                    <p className='experience-text p-2'>
+                      I build stand alone websites and applications for clients from around the world. Using modern technologies like React and Node.js I 
                       build extensible, fully customized platforms for e-commerce and service based businesses. I also consult for start ups
-                      looking to build out their digital infrastructure and automate critical operations. Lastly, I provide SEO assessments and 
-                      security evaluations for growing e-commerce companies. 
+                      looking to build out their digital infrastructure and automate critical operations. 
                     </p>
                   </Col>
                 </Row>
-                <Row className='p-3'>
-                  <Col>
-                    <h2>ZenduIT - Junior Developer</h2>
-                    <h3>Feb. 2019 - Sep. 2019</h3>
-                    <p>
-                      As a junior developer I was tasked with building unit tests for legacy codebases and pre-production applications. I also 
-                      worked on fixing bugs in production applications passed down from the support department. I was given the opportunity to 
-                      build an API integration from scratch using Node.js and Typescript. The application was a stand alone server that connecting 
-                      realtime data feeds from emergency vehicles to a virtual client dashboard. I deployed the application on Google Cloud Services
-                      Platform using App Engine. 
+                <Row className='experience-row p-3 m-5 rounded'>
+                  <Col className='experience-col'>
+                    <div className='experience-hover p-2 rounded'>
+                      <h2>Junior Developer @ ZenduIt</h2>
+                      <h4>Feb. 2019 - Sep. 2019</h4>
+                    </div>
+                    <p className='experience-text p-4'>
+                      Built unit tests for legacy codebases and new projects. Fixed bugs in live applications and assisted with QA. I was given the 
+                      opportunity to build an API integration for a client using Node.js and Typescript. The application was a stand 
+                      alone server connecting realtime data feeds from emergency vehicles to a proprietary API owned by the client. 
                     </p>
                   </Col>
                 </Row>
@@ -322,22 +331,28 @@ const App = () => {
                     <Button
                       href={pdf}
                       target='_blank'
+                      className='experience-button m-5'
                     >
-                      My Resume
+                      Download My Resume
                     </Button>
                   </Col>
                 </Row>
               </Container>
         </section>
 
-        <section id='publications'>
+        <section id='writing'>
           <Container>
-            <Row className='p-3 text-center'>
+            <Row className='pt-5 pb-3 text-center'>
               <Col>
-                <h1 className='publications-title'>Publications.</h1>
+                <h1 className='writing-title'>Articles.</h1>
               </Col>
             </Row>
-            <Row className='m-3'>
+            <Row className='p-3 text-center'>
+              <Col>
+                <h5 className='writing-text'>I like sharing knowledge and passing on ideas.</h5>
+              </Col>
+            </Row>
+            <Row className='m-5'>
               <Col md={6}>
                 <a href='https://medium.com/@tom.w.j.sanderson/a-practical-guide-to-technical-tests-for-junior-devs-part-1-7890b5689c0'>
                 <div className='hover-effect rounded'>
@@ -349,7 +364,8 @@ const App = () => {
                   <div className='overlay'>
                     <h2>A Practical Guide to Technical Tests (For Junior Devs): Part I</h2>
                     <p>
-                      The first part of a series on Medium.com that teaches junior developers how to solve technical tests and approach coding problems. 
+                      The first part of a guide that teaches junior developers how to approach 
+                      technical tests and solve coding problems. 
                     </p>
                   </div>
                 </div>
@@ -363,8 +379,8 @@ const App = () => {
           <Container>
             <Row className='text-center'>
               <Col>
-                <h1 className='contact-title'>Contact.</h1>
-                <h2>Have some questions or a project you want me to work on? <br />Send me a message and let's chat.</h2>
+                <h1 className='contact-title pt-5 pb-4'>Contact.</h1>
+                <h2 className='p-3'>Have some technical questions or a project you need help with? <br />Send me a message.</h2>
               </Col>
             </Row>
             <Row>
@@ -438,11 +454,6 @@ const App = () => {
           <Navbar className='nav-container'>
             <Nav className='m-auto'>
               <Nav.Link>About</Nav.Link>
-              <Nav.Link>My Skills</Nav.Link>
-              <Nav.Link>Projects</Nav.Link>
-              <Nav.Link>Experience</Nav.Link>
-              <Nav.Link>Publications</Nav.Link>
-              <Nav.Link>Contact</Nav.Link>
             </Nav>
           </Navbar>
         </section>
