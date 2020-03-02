@@ -19,7 +19,7 @@ import portfolio from '../assets/images/profile.jpg';
 // resume
 import pdf from '../assets/Tom_Resume.pdf';
 
-// TODO's:  finish footer, add social links, break out files into structure, add some tests
+// TODO's:  add social links, break out files into structure, add some tests
 
 const skills = [
   { type: 'language', name: 'HTML', value: '80' },
@@ -83,33 +83,6 @@ const App = () => {
             <Nav.Link onClick={() => scrollToElement('contactElement')}>Contact</Nav.Link>
           </Nav>
         </Navbar>
-      </section>
-
-      <section id='side-navigation' className='icon-bar'>
-        <Container>
-          <Row>
-            <Col md={2} >
-              <Button className='footer-button' href='https://github.com/twjsanderson'>
-                  <FontAwesomeIcon  
-                    icon={faGithubSquare} 
-                    className='footer-icon' 
-                  />
-              </Button>
-              <Button className='footer-button' href='https://www.linkedin.com/in/tom-sanderson-b6bb5084/'>
-                  <FontAwesomeIcon  
-                    icon={faLinkedin} 
-                    className='footer-icon' 
-                  />
-              </Button>
-              <Button className='footer-button' href='https://medium.com/@tom.w.j.sanderson'>
-                <FontAwesomeIcon  
-                  icon={faMedium} 
-                  className='footer-icon' 
-                />
-              </Button>
-              </Col>
-            </Row>
-          </Container>
       </section>
 
       <section id='main'>
@@ -184,6 +157,7 @@ const App = () => {
                   Have a problem that needs to be solved?
                 </h2>
                   <Button
+                      onClick={() => scrollToElement('contact')}
                     className='experience-button m-3'
                   >
                     Let's Chat
