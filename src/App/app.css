@@ -325,3 +325,52 @@
 .contact-title {
     font-size: 5rem;
 }
+
+.footer-icon {
+    font-size: 2rem;
+    margin: 0.3em;
+}
+
+.footer-icon:hover {
+    cursor: pointer;
+}
+
+.footer-button {
+    background-color: black;
+    border: none;
+}
+
+.footer-button:hover {
+    background-color: black;
+    color: white;
+}
+
+.footer-button:active {
+    color: black !important;
+    background-color: white !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.footer-button:focus {
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.footer-button::after {
+    background-color: black !important;
+    border: none !important;
+}
+
+
+.icon-bar {
+    position: fixed;
+    top: 50%;
+    right: 1%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    -webkit-transform: translateX(-1%);
+    -ms-transform: translateX(-1%);
+    transform: translateX(-1%);
+  }

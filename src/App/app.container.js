@@ -5,7 +5,7 @@ import Axios from 'axios';
 import Typist from 'react-typist';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronDown, faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
-import { faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import { faGithubSquare, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
 // import { Link } from 'react-router-dom';
 // eslint-disable-next-line
 import * as Scroll from 'react-scroll';
@@ -18,6 +18,8 @@ import portfolio from '../assets/images/profile.jpg';
 
 // resume
 import pdf from '../assets/Tom_Resume.pdf';
+
+// TODO's:  finish footer, add social links, break out files into structure, add some tests
 
 const skills = [
   { type: 'language', name: 'HTML', value: '80' },
@@ -44,7 +46,7 @@ const App = () => {
       event.preventDefault();
       const data = { email, message };
     
-      Axios.post('need firebase function here', data).catch(error => {
+      Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/submit', data).catch(error => {
         if (error) { 
           setError(error);
         }
@@ -60,8 +62,8 @@ const App = () => {
 
   };
 
-  const scrollToElement = () => {
-    scroller.scrollTo('aboutElement', {
+  const scrollToElement = (element) => {
+    scroller.scrollTo(element, {
       duration: 1000,
       smooth: true
     })
@@ -73,48 +75,79 @@ const App = () => {
         <Navbar className='nav-container'>
           <Navbar.Brand>Tom Sanderson</Navbar.Brand>
           <Nav className='ml-auto'>
-            <Nav.Link>About</Nav.Link>
-            <Nav.Link>My Skills</Nav.Link>
-            <Nav.Link>Projects</Nav.Link>
-            <Nav.Link>Experience</Nav.Link>
-            <Nav.Link>Writing</Nav.Link>
-            <Nav.Link>Contact</Nav.Link>
+            <Nav.Link onClick={() => scrollToElement('aboutElement')}>About</Nav.Link>
+            <Nav.Link onClick={() => scrollToElement('skillsElement')}>Skills</Nav.Link>
+            <Nav.Link onClick={() => scrollToElement('workElement')}>Projects</Nav.Link>
+            <Nav.Link onClick={() => scrollToElement('experienceElement')}>Resume</Nav.Link>
+            <Nav.Link onClick={() => scrollToElement('writingElement')}>Articles</Nav.Link>
+            <Nav.Link onClick={() => scrollToElement('contactElement')}>Contact</Nav.Link>
           </Nav>
         </Navbar>
       </section>
 
+      <section id='side-navigation' className='icon-bar'>
+        <Container>
+          <Row>
+            <Col md={2} >
+              <Button className='footer-button' href='https://github.com/twjsanderson'>
+                  <FontAwesomeIcon  
+                    icon={faGithubSquare} 
+                    className='footer-icon' 
+                  />
+              </Button>
+              <Button className='footer-button' href='https://www.linkedin.com/in/tom-sanderson-b6bb5084/'>
+                  <FontAwesomeIcon  
+                    icon={faLinkedin} 
+                    className='footer-icon' 
+                  />
+              </Button>
+              <Button className='footer-button' href='https://medium.com/@tom.w.j.sanderson'>
+                <FontAwesomeIcon  
+                  icon={faMedium} 
+                  className='footer-icon' 
+                />
+              </Button>
+              </Col>
+            </Row>
+          </Container>
+      </section>
+
       <section id='main'>
       <Container fluid className='main-container'>
-          <Row>
-            <Col>
-              <Typist 
-                startDelay={300} 
-                cursor={{ show: false }}
-                avgTypingDelay={100}
-              >
-              <Col className='p-3 h-100 d-flex justify-content-center'>
-                <h1 className='main-title'>Tom Sanderson.</h1>  
-              </Col>
-              <Typist.Delay ms={500} />
-              <Col className='p-3 h-100 d-flex justify-content-center'>
-                <h1 className='main-title' style={{ textIndent: '2.5em' }}>Web Developer.</h1>
-              </Col>
-              <Typist.Delay ms={500} />
-              <Col className='h-100 d-flex justify-content-center'>
-                <span className='main-type'>H@ck3r.</span>
-                <Typist.Backspace count={6} delay={150} />
-                <span className='main-retype'>acker.</span>
-              </Col>
-              </Typist>
+        <Row>
+          <Col>
+            <Typist 
+              startDelay={300} 
+              cursor={{ show: false }}
+              avgTypingDelay={100}
+            >
+            <Col className='p-3 h-100 d-flex justify-content-center'>
+              <h1 className='main-title'>Tom Sanderson.</h1>  
             </Col>
-          </Row>
-        </Container>
+            <Typist.Delay ms={500} />
+            <Col className='p-3 h-100 d-flex justify-content-center'>
+              <h1 className='main-title' style={{ textIndent: '2.5em' }}>Web Developer.</h1>
+            </Col>
+            <Typist.Delay ms={500} />
+            <Col className='h-100 d-flex justify-content-center'>
+              <span className='main-type'>H@ck3r.</span>
+              <Typist.Backspace count={6} delay={150} />
+              <span className='main-retype'>acker.</span>
+            </Col>
+            </Typist>
+          </Col>
+        </Row>
+      </Container>
 
         <Container fluid className='h-100'>
           <Row className='h-100'>
             <Col className='h-100 d-flex justify-content-center'>
               <Anime rotateX={360} delay={7000} duration={5000}>
-                <FontAwesomeIcon onClick={() => scrollToElement()} icon={faChevronDown} className='main-icon' />
+                <FontAwesomeIcon 
+                  onClick={() => scrollToElement('aboutElement')} 
+                  icon={faChevronDown} 
+                  className='main-icon' 
+                />
               </Anime>
             </Col>
           </Row>
@@ -162,8 +195,9 @@ const App = () => {
 
           <section id='skills'>
             <Container className='pt-5'>
+              <Element name='skillsElement' />
               <h1 className='skills-title text-center pt-4 pb-2'>Technical Skills.</h1>
-              <h1 className='pt-5 pb-3'>Languages/Scripts</h1>
+              <h1 className='pt-5 pb-3'>Languages</h1>
               {
                 skills.map(item => {
                   if (item.type === 'language') { 
@@ -182,7 +216,7 @@ const App = () => {
                   return null;
                 })
               }
-              <h1 className='pt-5 pb-3'>Frameworks</h1>
+              <h1 className='pt-5 pb-3'>Frameworks/Environments</h1>
               {
                 skills.map(item => {
                   if (item.type === 'framework') {
@@ -264,6 +298,7 @@ const App = () => {
         <section id='work'>
           <Container className='p-5'>
               <Row className='text-center'>
+              <Element name='workElement' />
                 <Col>
                   <h1 className='work-title p-3'>My Work.</h1>
                 </Col>
@@ -287,7 +322,7 @@ const App = () => {
               </Row>
               <Row className='text-center d-flex justify-content-center'>
                 <Col className='m-5 p-4' md={5}>
-                  <a><p className='experience-link'>Checkout my code on Github</p></a>
+                  <Button className='experience-button' href='https://github.com/twjsanderson'>Checkout my code on Github</Button>
                 </Col>
               </Row>
           </Container>
@@ -296,6 +331,7 @@ const App = () => {
         <section id='experience'>
               <Container>
                 <Row className='text-center p-5'>
+                <Element name='experienceElement' />
                   <Col>
                     <h1 className='p-3 experience-title'>Resume.</h1>
                   </Col>
@@ -343,6 +379,7 @@ const App = () => {
         <section id='writing'>
           <Container>
             <Row className='pt-5 pb-3 text-center'>
+              <Element name='writingElement' /> 
               <Col>
                 <h1 className='writing-title'>Articles.</h1>
               </Col>
@@ -378,6 +415,7 @@ const App = () => {
         <section id='contact'>
           <Container>
             <Row className='text-center'>
+              <Element name='contactElement' />
               <Col>
                 <h1 className='contact-title pt-5 pb-4'>Contact.</h1>
                 <h2 className='p-3'>Have some technical questions or a project you need help with? <br />Send me a message.</h2>
@@ -417,30 +455,43 @@ const App = () => {
                             onChange={e => setMessage(e.target.value)} 
                         />
                       </label>
-                      <br />
-                      <input 
-                          className='rounded'
-                          type='submit' 
-                          value='submit' 
-                      />
+                    </Col>
+                  </Row>
+                  <Row className='p-3'>
+                    <Col md={2}>
+                      <Button 
+                        className='experience-button'
+                        type='submit' 
+                        value='submit' 
+                      >
+                        Send
+                      </Button>
+                    </Col>
+                    <Col md={10}>
                       {
                         error && success === false ? 
-                            <h5 className='text-red p-2'>
-                                <FontAwesomeIcon 
-                                    icon={faTimesCircle} 
-                                    color='red' 
-                                /> 
-                                Oops looks like there was an error. Please try again.
+                          <Row className='d-flex justify-content-center mt-2'>
+                            <FontAwesomeIcon 
+                              icon={faTimesCircle} 
+                              className='m-2'
+                              color='red' 
+                            /> 
+                            <h5 className='text-green p-1'>
+                            Oops looks like there was an error. Please try again.
                             </h5> 
+                          </Row>
                             : success === true ?
-                                <h5 className='text-green p-2'>
-                                    <FontAwesomeIcon 
-                                        icon={faCheckCircle} 
-                                        color='green' 
-                                    /> 
-                                    Success! Your message was sent.
+                              <Row className='d-flex justify-content-center mt-2'>
+                                <FontAwesomeIcon 
+                                  icon={faCheckCircle} 
+                                  className='m-2'
+                                  color='green' 
+                                /> 
+                                <h5 className='text-green p-1'>
+                                  Success! Your message was sent.
                                 </h5> 
-                                : null
+                              </Row>
+                              : null
                       }
                     </Col>
                   </Row>
@@ -453,7 +504,24 @@ const App = () => {
         <section id='footer'>
           <Navbar className='nav-container'>
             <Nav className='m-auto'>
-              <Nav.Link>About</Nav.Link>
+              <Button className='footer-button' href='https://github.com/twjsanderson'>
+                  <FontAwesomeIcon  
+                    icon={faGithubSquare} 
+                    className='footer-icon' 
+                  />
+              </Button>
+              <Button className='footer-button' href='https://www.linkedin.com/in/tom-sanderson-b6bb5084/'>
+                  <FontAwesomeIcon  
+                    icon={faLinkedin} 
+                    className='footer-icon' 
+                  />
+              </Button>
+              <Button className='footer-button' href='https://medium.com/@tom.w.j.sanderson'>
+                <FontAwesomeIcon  
+                  icon={faMedium} 
+                  className='footer-icon' 
+                />
+              </Button>
             </Nav>
           </Navbar>
         </section>
