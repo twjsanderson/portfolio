@@ -8,9 +8,8 @@ import { faChevronDown, faCheckCircle, faTimesCircle } from '@fortawesome/free-s
 import { faGithubSquare, faLinkedin, faMedium } from '@fortawesome/free-brands-svg-icons';
 // import { Link } from 'react-router-dom';
 // eslint-disable-next-line
-import * as Scroll from 'react-scroll';
-// eslint-disable-next-line
 import { Element, animateScroll as scroll, scroller } from 'react-scroll'
+ 
 import Anime from 'react-anime';
  
 // images
@@ -19,7 +18,7 @@ import portfolio from '../assets/images/profile.jpg';
 // resume
 import pdf from '../assets/Tom_Resume.pdf';
 
-// TODO's:  add social links, break out files into structure, add some tests
+// TODO's:  break out files into structure, add some tests
 
 const skills = [
   { type: 'language', name: 'HTML', value: '80' },
@@ -59,7 +58,6 @@ const App = () => {
           setEmail('');
           setMessage('');
       }
-
   };
 
   const scrollToElement = (element) => {
@@ -72,17 +70,21 @@ const App = () => {
   return (
     <>
       <section id='navigation'>
-        <Navbar className='nav-container'>
+        <Navbar collapseOnSelect expand="lg" variant='dark' className='nav-container'>
           <Navbar.Brand>Tom Sanderson</Navbar.Brand>
-          <Nav className='ml-auto'>
-            <Nav.Link onClick={() => scrollToElement('aboutElement')}>About</Nav.Link>
-            <Nav.Link onClick={() => scrollToElement('skillsElement')}>Skills</Nav.Link>
-            <Nav.Link onClick={() => scrollToElement('workElement')}>Projects</Nav.Link>
-            <Nav.Link onClick={() => scrollToElement('experienceElement')}>Resume</Nav.Link>
-            <Nav.Link onClick={() => scrollToElement('writingElement')}>Articles</Nav.Link>
-            <Nav.Link onClick={() => scrollToElement('contactElement')}>Contact</Nav.Link>
-          </Nav>
+          <Navbar.Toggle aria-controls='responsive-navbar-nav' />
+          <Navbar.Collapse id='responsive-navbar-nav'>
+            <Nav className='ml-auto'>
+              <Nav.Link onClick={() => scrollToElement('aboutElement')}>About</Nav.Link>
+              <Nav.Link onClick={() => scrollToElement('skillsElement')}>Skills</Nav.Link>
+              <Nav.Link onClick={() => scrollToElement('workElement')}>Projects</Nav.Link>
+              <Nav.Link onClick={() => scrollToElement('experienceElement')}>Resume</Nav.Link>
+              <Nav.Link onClick={() => scrollToElement('writingElement')}>Articles</Nav.Link>
+              <Nav.Link onClick={() => scrollToElement('contactElement')}>Contact</Nav.Link>
+            </Nav>
+          </Navbar.Collapse>
         </Navbar>
+
       </section>
 
       <section id='main'>
@@ -131,7 +133,7 @@ const App = () => {
         <Container className='p-5'>
           <Row className='text-center'>
             <Col>
-            <Element name='aboutElement' />
+            <Element name='aboutElement'></Element>
               <h1 className='about-title p-5'>
                 Hi, I'm Tom. 
               </h1>
@@ -147,11 +149,12 @@ const App = () => {
             </Col>
             <Col md={6}>
               <h1 className='pb-3 pt-1'>
-                Full Stack Web Developer based in Toronto, Canada
+                Full-Stack Web Developer.
+                Part-Time Hacker.
               </h1>
                 <h2 className='p-2'>
                   Whether I am designing a custom landing page, building an API integration or testing the 
-                  security of a website, I always create lasting value for my clients.
+                  security of a website, I always create lasting value for my clients. 
                 </h2>
                 <h2 className='p-2'>
                   Have a problem that needs to be solved?
@@ -397,78 +400,73 @@ const App = () => {
             </Row>
             <Row>
               <Col className='d-flex align-items-center justify-content-center'>
-                <Form 
+                <Form
+                  style={{ width: '75%'}} 
                   onSubmit={(e) => handleSubmit(e)}
                 >
-                  <Row className='p-3'>
-                    <Col className=''>
-                      <label>
-                          <h3>Email</h3>
-                          <input 
-                              required
-                              type='email' 
-                              name='email' 
-                              size='70'
-                              value={email} 
-                              onChange={e => setEmail(e.target.value)} 
-                          />
-                      </label>
-                    </Col>
-                  </Row>
-                  <Row className='p-3'>
-                    <Col>
-                      <label>
-                        <h3>Message</h3>
-                        <textarea
-                            required
-                            rows='7' 
-                            cols='70'
-                            type='text' 
-                            name='message' 
-                            value={message} 
-                            onChange={e => setMessage(e.target.value)} 
-                        />
-                      </label>
-                    </Col>
-                  </Row>
-                  <Row className='p-3'>
-                    <Col md={2}>
-                      <Button 
-                        className='experience-button'
-                        type='submit' 
-                        value='submit' 
-                      >
-                        Send
-                      </Button>
-                    </Col>
-                    <Col md={10}>
-                      {
-                        error && success === false ? 
-                          <Row className='d-flex justify-content-center mt-2'>
-                            <FontAwesomeIcon 
-                              icon={faTimesCircle} 
-                              className='m-2'
-                              color='red' 
-                            /> 
-                            <h5 className='text-green p-1'>
+                  <Form.Group>
+                    <Form.Label>
+                      <h3>Email</h3>
+                    </Form.Label>
+                    <Form.Control 
+                      type="email"
+                      name='email' 
+                      required 
+                      placeholder="Enter email" 
+                      value={email} 
+                      onChange={e => setEmail(e.target.value)} 
+                    />
+                  </Form.Group>
+
+                  <Form.Group>
+                    <Form.Label>
+                      <h3>Message</h3>
+                    </Form.Label>
+                    <Form.Control
+                      as='textarea' 
+                      name='text'
+                      rows='5'
+                      required 
+                      placeholder="Enter Message" 
+                      value={message} 
+                      onChange={e => setMessage(e.target.value)}
+                    />
+                  </Form.Group>
+
+                  <Button 
+                    className='experience-button'
+                    type='submit' 
+                    value='submit' 
+                  >
+                    Send
+                  </Button>
+
+                    {
+                      error && success === false ? 
+                        <Row className='d-flex justify-content-center mt-2'>
+                          <FontAwesomeIcon 
+                            icon={faTimesCircle} 
+                            className='m-2'
+                            color='red' 
+                          /> 
+                          <h5 className='text-green p-1'>
                             Oops looks like there was an error. Please try again.
-                            </h5> 
-                          </Row>
-                            : success === true ?
-                              <Row className='d-flex justify-content-center mt-2'>
-                                <FontAwesomeIcon 
-                                  icon={faCheckCircle} 
-                                  className='m-2'
-                                  color='green' 
-                                /> 
-                                <h5 className='text-green p-1'>
-                                  Success! Your message was sent.
-                                </h5> 
-                              </Row>
-                              : null
-                      }
-                    </Col>
-                  </Row>
+                          </h5> 
+                        </Row>
+                          : success === true ?
+                            <Row className='d-flex justify-content-center mt-2'>
+                              <FontAwesomeIcon 
+                                icon={faCheckCircle} 
+                                className='m-2'
+                                color='green' 
+                              /> 
+                              <h5 className='text-green p-1'>
+                                Success! Your message was sent.
+                              </h5> 
+                            </Row>
+                            : null
+                    }
+
                 </Form>
               </Col>
             </Row>
