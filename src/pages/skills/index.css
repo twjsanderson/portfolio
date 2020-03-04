@@ -1,0 +1,16 @@
+#skills {
+    background-color: rgb(224, 222, 211);
+    padding-bottom: 10%;
+}
+
+#skills .progress {
+    background-color: white;
+}
+
+#skills h4 {
+    font-family: 'Nanum Myeongjo', serif;
+}
+
+.skills-title {
+    font-size: 5rem;
+}

@@ -1,0 +1,12 @@
+#about-view {
+    min-height: 60em;
+}
+
+.about-title {
+    font-size: 5rem;
+}
+
+.about-img {
+    height: auto;
+    width: 75%;
+}
