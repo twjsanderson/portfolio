@@ -4,10 +4,16 @@ import {} from 'react-bootstrap';
 // components 
 import WritingView from './writing.component';
 
+// constants
+import articles from '../../constants/writing';
+
 const Writing = () => {
+    const articleArray = articles.articles;
     return (
         <section id='writing'>
-            <WritingView />
+            <WritingView 
+                articles={articleArray} 
+            />
         </section>
     )
 };
