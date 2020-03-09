@@ -12,7 +12,7 @@ import Writing from '../pages/writing';
 import Contact from '../pages/contact';
 import Footer from '../ui/footer';
 
-// TODo: add tests, write readme, add icons to make it progressive web app, manual QA, check on different browser, deploy to firebase
+// TODo: add icons to make it progressive web app, manual QA, check on different browser, deploy to firebase
 
 const App = () => {
   return (
