@@ -4,7 +4,7 @@ A simple single page portfolio built with React & Firebase Functions (Node.js)
 
 ## Screenshot
 
-!["Home"](https://github.com/twjsanderson/geoLocation-app/blob/master/src/assets/images/homePage.png)
+!["Home"](https://github.com/twjsanderson/portfolio/blob/master/src/assets/images/portfolio.png)
 
 ### To run this project locally 
 
