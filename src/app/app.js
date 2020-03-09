@@ -12,7 +12,7 @@ import Writing from '../pages/writing';
 import Contact from '../pages/contact';
 import Footer from '../ui/footer';
 
-// TODO: check on different browser, deploy to firebase
+// TODO: deploy to firebase
 
 const App = () => {
   return (
