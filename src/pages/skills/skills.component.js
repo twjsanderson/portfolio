@@ -12,7 +12,6 @@ const SkillsView = (props) => {
             {
                 skills.map((skill, index) => {
                     return (
-                        
                             <ProgressDisplay
                                 key={skill.name}
                                 type={title}

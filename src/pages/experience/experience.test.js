@@ -1,12 +1,12 @@
 import React from 'react';
-import App from './app';
+import Experience from './experience.container';
 import { shallow, mount } from 'enzyme';
 
-describe('App component rendering ability', () => {
+describe('Experience component rendering ability', () => {
   it('renders without crashing', () => {
-    shallow(<App />);
+    shallow(<Experience />);
    });
    it('renders component and its children without crashing', () => {
-    mount(<App />);
+    mount(<Experience />);
   });
 });

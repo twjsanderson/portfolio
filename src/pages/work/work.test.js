@@ -1,12 +1,12 @@
 import React from 'react';
-import App from './app';
+import Work from './work.container';
 import { shallow, mount } from 'enzyme';
 
-describe('App component rendering ability', () => {
+describe('Work component rendering ability', () => {
   it('renders without crashing', () => {
-    shallow(<App />);
+    shallow(<Work />);
    });
    it('renders component and its children without crashing', () => {
-    mount(<App />);
+    mount(<Work />);
   });
 });
