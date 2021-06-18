@@ -3,8 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle, faTimesCircle } from '@fortawesome/free-solid-svg-icons';
 import Axios from 'axios';
 
-
-// components 
+// Components 
 import ContactView from './contact.component';
 
 const Contact = () => {
@@ -16,21 +15,21 @@ const Contact = () => {
     const handleSubmit = event => {
         event.preventDefault();
         const data = { email, message };
-        
-        Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/submit', data).catch(error => {
-            if (error) { 
-                setError(error);
-            }
-        });
 
-        if (error) {
-            setSuccess(false)
-        } else {
-            setSuccess(true);
-            setEmail('');
-            setMessage('');
-        }
+        Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/submit', data)
+            .catch(error => {
+                console.error(data, error)
+                if (error) {
+                    setError(error);
+                    setSuccess(false)
+                } else {
+                    setSuccess(true);
+                    setEmail('');
+                    setMessage('');
+                }
+            });
     };
+    console.log(error)
 
     return (
         <section id='contact'>

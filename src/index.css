@@ -1,9 +1,17 @@
-@import url('https://fonts.googleapis.com/css?family=Crimson+Text|Nanum+Myeongjo&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Special+Elite|Montserrat|Droid+Sans+Mono&display=swap');
 
-h1 {
-  font-family: 'Crimson Text', serif;
+.title-name {
+  font-family: 'Special Elite', serif;
+}
+
+.type-font {
+  font-family: 'Droid Sans Mono', serif;
 }
 
 h2 {
-  font-family: 'Nanum Myeongjo', serif;
+  font-family: 'Montserrat', serif;
 }
+
+/* p {
+  font-family: 'Montserrat', serif;
+} */

@@ -3,20 +3,18 @@ import { Container, Row, Col, Form, Button, } from 'react-bootstrap';
 import { Element } from 'react-scroll';
 import './index.css';
 
-const ContactView = (props) => {
-    const { 
-        FontAwesomeIcon,
-        faCheckCircle, 
-        faTimesCircle, 
-        handleSubmit,
-        email,
-        setEmail,
-        message,
-        setMessage,
-        error,
-        success
-    } = props;
-
+const ContactView = ({ 
+    FontAwesomeIcon,
+    faCheckCircle, 
+    faTimesCircle, 
+    handleSubmit,
+    email,
+    setEmail,
+    message,
+    setMessage,
+    error,
+    success
+}) => {
     return (
         <section id='contact-view'>
             <Container>
@@ -93,7 +91,7 @@ const ContactView = (props) => {
                                                 Success! Your message was sent.
                                             </h5> 
                                         </Row>
-                                        : null
+                                            : null
                             }
 
                         </Form>

@@ -2,9 +2,9 @@ import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import './index.css';
 import Typist from 'react-typist';
-import Anime from 'react-anime';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
+// import Anime from 'react-anime';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
 const MainView = (props) => {
     const { scrollToElement } = props;
@@ -14,46 +14,36 @@ const MainView = (props) => {
         <section id='main-view'>
             <Container fluid className='main-container'>
                 <Row>
-                    <Col>
+                    <Col className='main-title-div'>
+                        <div>
+                            <h1 className='main-title title-name'>Tom <br /> Sanderson</h1>
+                        </div>
+                    </Col>
+                    <Col className='main-type-col'>
                         <Typist 
-                            startDelay={300} 
+                            startDelay={4000} 
                             cursor={{ show: false }}
-                            avgTypingDelay={100}
+                            avgTypingDelay={40}
                         >
-                            <Col className='p-3 h-100 d-flex justify-content-center'>
-                                <h1 className='main-title'>Tom Sanderson.</h1>  
-                            </Col>
-                            <Typist.Delay ms={500} />
-                            <Col className='p-3 h-100 d-flex justify-content-center'>
-                                <h1 className='main-title' style={{ textIndent: '2.5em' }}>Web Developer.</h1>
-                            </Col>
-                            <Typist.Delay ms={500} />
-                            <Col className='h-100 d-flex justify-content-center'>
-                                <span className='main-type'>H@ck3r.</span>
-                                <Typist.Backspace 
-                                    count={6} 
-                                    delay={150} 
-                                />
-                                <span className='main-retype'>acker.</span>
+                            <Col className='main-type-text type-font'>
+                                <p>const main = () {'=> {'}</p> 
+                                    <p style={{textIndent:'2.5rem'}}>Tech Writer</p>
+                                    <p style={{textIndent:'2.5rem'}}>Mentor</p>
+                                <p>{"};"}</p> 
                             </Col>
                         </Typist>
-                    </Col>
-                </Row>
-            </Container>
-            <Container fluid className='h-100'>
-                <Row className='h-100'>
-                    <Col className='h-100 d-flex justify-content-center'>
-                        <Anime 
-                            rotateX={360} 
-                            delay={7000} 
-                            duration={5000}
-                        >
-                            <FontAwesomeIcon 
-                                onClick={() => scroller('aboutElement')} 
-                                icon={faChevronDown} 
-                                className='main-icon' 
-                            />
-                        </Anime>
+                        {/* <Col className=' d-flex justify-content-center'>
+                            <Anime 
+                                delay={1000} 
+                                duration={1000}
+                            >
+                                <FontAwesomeIcon 
+                                    onClick={() => scroller('aboutElement')} 
+                                    icon={faChevronDown} 
+                                    className='main-icon' 
+                                />
+                            </Anime>
+                        </Col> */}
                     </Col>
                 </Row>
             </Container>

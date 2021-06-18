@@ -3,8 +3,7 @@ import {Container, Row, Col, Button } from 'react-bootstrap';
 import './index.css';
 import { Element } from 'react-scroll';
 
-const AboutView = (props) => {
-    const { portfolio, scrollToElement } = props;
+const AboutView = ({ portfolio, scrollToElement }) => {
     const scroller = scrollToElement.scrollToElement;
 
     return (

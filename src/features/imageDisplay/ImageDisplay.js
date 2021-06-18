@@ -1,9 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
 
-const ImageDisplay = (props) => {
-    const { images } = props;
-    
+const ImageDisplay = ({ images }) => {
     return (
         images.map((image, index) => {
             return (

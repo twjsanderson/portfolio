@@ -1,0 +1,24 @@
+:root {
+    --neon-text-color: #FFFFFF;
+}
+
+.nav-container {
+    background-color: black;
+    padding: 1rem;
+}
+
+.nav-link {
+    font-family: 'Montserrat', serif;
+    font-size: 1.3rem;
+    color: white !important;
+}
+
+.nav-link:hover {
+    text-shadow:
+        -0.2rem -0.2rem 1rem #fff,
+        0 0 1rem var(--neon-text-color), 
+        0 0 3rem var(--neon-text-color),
+        0 0 6rem var(--neon-text-color),
+        0 0 8rem var(--neon-text-color),
+        0 0 10rem var(--neon-text-color);
+}

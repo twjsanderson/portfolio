@@ -13,6 +13,6 @@ const skills = [
     { type: 'Devops', name: 'Firebase', value: '70' }
 ];
 
-const skillsTitles = ['Languages', 'Frameworks', 'Databases/Versioning', 'Devops', 'Learning'];
+const skillsTitles = ['Languages', 'Frameworks', 'Databases', 'Devops', 'Learning'];
 
 export default { skills, skillsTitles };
