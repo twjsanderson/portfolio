@@ -1,14 +1,20 @@
 import React from 'react';
 import {Container, Row, Col, Button } from 'react-bootstrap';
+import BackgroundVideo from '../../features/ui/backgroundVideo/backgroundVideo.container';
 import './index.css';
 import { Element } from 'react-scroll';
+import code from '../../assets/video/code.mp4';
+
 
 const AboutView = ({ portfolio, scrollToElement }) => {
     const scroller = scrollToElement.scrollToElement;
 
     return (
         <section id='about-view'>
-            <Container className='p-5'>
+            <BackgroundVideo 
+                videoSource={code}
+            >
+            <Container className='about-content p-5'>
                 <Row className='text-center'>
                     <Col>
                         <Element name='aboutElement'></Element>
@@ -46,6 +52,7 @@ const AboutView = ({ portfolio, scrollToElement }) => {
                     </Col>
                 </Row>
             </Container>
+            </BackgroundVideo>
         </section>
     )
 };

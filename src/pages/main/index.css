@@ -94,9 +94,10 @@
 } */
 
 .main-type-text {
-    font-size: 2.1rem;
+    font-size: 1.9rem;
     line-height: 90%;
-    color: white;
+    font-weight: 200;
+    color: #006400;
 }
 
 .main-icon {

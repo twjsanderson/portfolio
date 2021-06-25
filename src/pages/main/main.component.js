@@ -26,10 +26,12 @@ const MainView = (props) => {
                             avgTypingDelay={40}
                         >
                             <Col className='main-type-text type-font'>
-                                <p>const main = () {'=> {'}</p> 
-                                    <p style={{textIndent:'2.5rem'}}>Tech Writer</p>
-                                    <p style={{textIndent:'2.5rem'}}>Mentor</p>
-                                <p>{"};"}</p> 
+                                {/* <div style={{ backgroundColor:'grey'}}> */}
+                                    <h3>Web Developer</h3> 
+                                    <h3>Designer</h3>
+                                    <h3>Mentor</h3>
+                                    {/* <h3>{"};"}</h3>  */}
+                                {/* </div> */}
                             </Col>
                         </Typist>
                         {/* <Col className=' d-flex justify-content-center'>
