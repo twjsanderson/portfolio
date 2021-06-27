@@ -1,15 +1,14 @@
 import React from 'react';
 
-// components 
+// Components 
 import MainView from './main.component';
-import scrollToElement from '../../helperFunctions/scroll';
 
 const Main = () => {
     return (
         <section id='main'>
-            <MainView scrollToElement={scrollToElement} />
+            <MainView />
         </section>
     )
 };
 
-export default Main;
+export default React.memo(Main);

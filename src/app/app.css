@@ -8,9 +8,9 @@
     position: relative;
     text-align: center;
     cursor: pointer;
-    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
-    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 4px 4px 4px 2px rgb(83, 80, 80);
+    -moz-box-shadow: 4px 4px 4px 2px rgb(83, 80, 80);
+    box-shadow: 4px 4px 4px 2px rgb(83, 80, 80);
 }
   
 .hover-effect .overlay {
@@ -55,7 +55,6 @@
     text-align: center;
     position: relative;
     font-size: 2rem;
-    font-family: 'Crimson Text', serif;
     background-color: transparent;
     color: #FFF;
     padding: 0.5em 0;

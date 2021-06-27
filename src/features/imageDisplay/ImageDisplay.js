@@ -7,19 +7,19 @@ const ImageDisplay = ({ images }) => {
             return (
                 <Row className='m-5' key={index}>
                     <Col md={6}>
-                    <a href={image.website}>
-                        <div className='hover-effect rounded'>
-                        <img 
-                            src={image.imageLink}
-                            className='img-fluid rounded'
-                            alt={image.imgAlt}
-                        />
-                        <div className='overlay'>
-                            <h2>{image.title}</h2>
-                            <p>{image.text}</p>
-                        </div>
-                        </div>
-                    </a>
+                        <a href={image.website}>
+                            <div className='hover-effect rounded'>
+                            <img 
+                                src={image.imageLink}
+                                className='img-fluid rounded'
+                                alt={image.imgAlt}
+                            />
+                            <div className='overlay'>
+                                <h2>{image.title}</h2>
+                                <p>{image.text}</p>
+                            </div>
+                            </div>
+                        </a>
                     </Col>
                 </Row>
             )

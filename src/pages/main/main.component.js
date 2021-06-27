@@ -1,15 +1,11 @@
 import React from 'react';
+import Typist from 'react-typist';
+
+// Styles
 import { Container, Row, Col } from 'react-bootstrap';
 import './index.css';
-import Typist from 'react-typist';
-// import Anime from 'react-anime';
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faChevronDown } from '@fortawesome/free-solid-svg-icons';
 
-const MainView = (props) => {
-    const { scrollToElement } = props;
-    const scroller = scrollToElement.scrollToElement; 
-
+const MainView = () => {
     return (
         <section id='main-view'>
             <Container fluid className='main-container'>
@@ -21,31 +17,19 @@ const MainView = (props) => {
                     </Col>
                     <Col className='main-type-col'>
                         <Typist 
-                            startDelay={4000} 
                             cursor={{ show: false }}
                             avgTypingDelay={40}
                         >
                             <Col className='main-type-text type-font'>
-                                {/* <div style={{ backgroundColor:'grey'}}> */}
-                                    <h3>Web Developer</h3> 
-                                    <h3>Designer</h3>
-                                    <h3>Mentor</h3>
-                                    {/* <h3>{"};"}</h3>  */}
-                                {/* </div> */}
+                                <h3>{'>'} loadDevProfile(tom_sanderson)</h3> 
+                                <h3>Initializing...</h3>
+                                <h3>Loading Profile Data...</h3>
+                                <h3>Building Interface...</h3>
+                                <h3>Success! Completed on {new Date().toString()}</h3>
+                                <h3>Scroll down to begin.</h3>
+
                             </Col>
                         </Typist>
-                        {/* <Col className=' d-flex justify-content-center'>
-                            <Anime 
-                                delay={1000} 
-                                duration={1000}
-                            >
-                                <FontAwesomeIcon 
-                                    onClick={() => scroller('aboutElement')} 
-                                    icon={faChevronDown} 
-                                    className='main-icon' 
-                                />
-                            </Anime>
-                        </Col> */}
                     </Col>
                 </Row>
             </Container>
@@ -53,4 +37,4 @@ const MainView = (props) => {
     )
 };
 
-export default MainView;
+export default React.memo(MainView);

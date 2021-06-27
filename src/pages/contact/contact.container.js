@@ -29,7 +29,7 @@ const Contact = () => {
                 }
             });
     };
-    console.log(error)
+    // console.log(error)
 
     return (
         <section id='contact'>

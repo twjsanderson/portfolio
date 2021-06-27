@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col, ProgressBar } from 'react-bootstrap';
 
-const ProgressDisplay = ({ type, skill, index } ) => {
+const ProgressDisplay = ({ type, skill, index }) => {
     return (
         skill.type === type ?
             <Row key={index} className='h-100 d-flex justify-content-center align-items-center'>
