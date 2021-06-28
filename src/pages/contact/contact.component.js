@@ -21,12 +21,12 @@ const ContactView = ({
                 <Row className='text-center'>
                     <Element name='contactElement' />
                     <Col>
-                        <h1 className='contact-title pt-5 pb-4'>Contact.</h1>
-                        <h2 className='p-3'>Have some technical questions or a project you need help with? <br /> Send me a message.</h2>
+                        <h2 className='contact-title type-font pt-5 pb-4'>Contact</h2>
+                        
                     </Col>
                 </Row>
                 <Row>
-                    <Col className='d-flex align-items-center justify-content-center'>
+                    <Col className='d-flex align-items-center justify-content-center type-font'>
                         <Form
                             style={{ width: '75%'}} 
                             onSubmit={(e) => handleSubmit(e)}

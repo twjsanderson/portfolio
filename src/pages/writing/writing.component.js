@@ -1,31 +1,28 @@
 import React from 'react';
-import { Container, Row, Col } from 'react-bootstrap';
 import { Element } from 'react-scroll';
-import './index.css';
 
-// components
+// Components
 import ImageDisplay from '../../features/imageDisplay/ImageDisplay'; 
 
-const WritingView = (props) => {
-    const { articles } = props;
+// Styles
+import { Container, Row, Col } from 'react-bootstrap';
+import './index.css';
 
+const WritingView = ({ articles }) => {
     return (
         <section id='writing-view'>
-            <Container>
-                <Row className='pt-5 pb-3 text-center'>
+            <Container fluid className='p-5'>
+                <Row className='text-center'>
                     <Element name='writingElement' /> 
                     <Col>
-                        <h1 className='writing-title'>Articles.</h1>
+                        <h2 className='writing-title type-font p-3'>Articles</h2>
                     </Col>
                 </Row>
-                <Row className='p-3 text-center'>
-                    <Col>
-                        <h5 className='writing-text'>I like sharing knowledge and passing on ideas.</h5>
-                    </Col>
+                <Row className='justify-content-md-center'>
+                    <ImageDisplay 
+                        images={articles} 
+                    />
                 </Row>
-                <ImageDisplay 
-                    images={articles} 
-                />
             </Container>
       </section>
     )

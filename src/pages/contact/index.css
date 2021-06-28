@@ -1,10 +1,7 @@
 #contact-view {
-    min-height: 50em;
-    background-color: rgb(224, 222, 211);
-}
-
-#contact-view h3 {
-    font-family: 'Crimson Text', serif;
+    min-height: 60em;
+    background-color: black;
+    color: #006400;
 }
 
 .contact-title {

@@ -1,6 +1,11 @@
+
 #work {
     min-height: 60em; 
     background-color: black;
+    background-image: url('../../assets/images/keyboard.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
 }
 
 .work-title {
