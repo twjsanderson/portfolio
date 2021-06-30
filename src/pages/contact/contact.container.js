@@ -16,7 +16,7 @@ const Contact = () => {
         event.preventDefault();
         const data = { email, message };
 
-        Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/submit', data)
+        Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/sendEmail', data)
             .catch(error => {
                 console.error(data, error)
                 if (error) {
@@ -29,7 +29,6 @@ const Contact = () => {
                 }
             });
     };
-    // console.log(error)
 
     return (
         <section id='contact'>

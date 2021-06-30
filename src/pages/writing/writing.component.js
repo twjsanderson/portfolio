@@ -15,7 +15,7 @@ const WritingView = ({ articles }) => {
                 <Row className='text-center'>
                     <Element name='writingElement' /> 
                     <Col>
-                        <h2 className='writing-title type-font p-3'>Articles</h2>
+                        <h2 className='writing-title type-font p-3'>Writing</h2>
                     </Col>
                 </Row>
                 <Row className='justify-content-md-center'>
