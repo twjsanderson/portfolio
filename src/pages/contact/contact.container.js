@@ -16,18 +16,24 @@ const Contact = () => {
         event.preventDefault();
         const data = { email, message };
 
-        Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/sendEmail', data)
-            .catch(error => {
-                console.error(data, error)
-                if (error) {
-                    setError(error);
-                    setSuccess(false)
-                } else {
-                    setSuccess(true);
-                    setEmail('');
-                    setMessage('');
-                }
-            });
+        Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/sendEmail', {
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded'
+            },    
+            data: data
+        })
+        .then(info => console.log(info))
+        .catch(error => {
+            console.error(data, error)
+            if (error) {
+                setError(error);
+                setSuccess(false)
+            } else {
+                setSuccess(true);
+                setEmail('');
+                setMessage('');
+            }
+        });
     };
 
     return (
