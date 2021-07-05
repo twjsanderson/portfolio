@@ -4,15 +4,14 @@ import './index.css';
 // components 
 import WorkView from './work.component';
 
-// constants
-import projects from '../../constants/work';
+// Constants
+import { projects } from '../../constants/work';
 
 const Work = () => {
-    const projectsArray = projects.projects;
     return (
         <section id='work'>
             <WorkView 
-                projects={projectsArray}
+                projects={projects}
             />
         </section>
     )

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 // Components 
 import AboutView from './about.component';
-import scrollToElement from '../../helperFunctions/scroll/scroll';
+import { scrollToElement } from '../../helperFunctions/scroll/scroll';
 
 // Images
 import portfolio from '../../assets/images/profile.jpg';

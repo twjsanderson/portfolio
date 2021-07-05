@@ -8,6 +8,36 @@
     font-size: 5rem;
 }
 
+.about-contact-button {
+    background-color: #006400;
+    color: black;
+    text-align: left;
+    border: none;
+    width: 10%;
+    font-size: 1.4rem;
+}
+
+.about-contact-button:hover {
+    color: #006400;
+    background-color: black;
+    border: none
+}
+
+.about-contact-button:active {
+    color: #006400 !important;
+    background-color: black !important;
+    border-color: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+.about-contact-button:focus {
+    color: black !important;
+    background-color: #006400 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
 .contact-error {
     margin-top: -5%;
 }

@@ -6,7 +6,7 @@ import glowinme_portal_home from '../assets/images/glowinme_portal_home.png';
 import candidly from '../assets/images/candidly.png';
 import zenduit from '../assets/images/zenduit.png';
 
-const projects = [
+export const projects = [
     { 
         website: 'https://glowinme.com/', 
         imageLink: glowinme_portal_home, 
@@ -44,5 +44,3 @@ const projects = [
     },
 
 ];
-
-export default { projects };

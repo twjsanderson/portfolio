@@ -61,7 +61,7 @@ const ContactView = ({
                             </Form.Group>
 
                             <Button 
-                                className='experience-button'
+                                className='about-contact-button'
                                 type='submit' 
                                 value='submit' 
                             >

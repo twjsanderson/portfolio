@@ -3,7 +3,6 @@ import { Navbar, Nav } from 'react-bootstrap';
 import './index.css';
 
 const NavigationView = ({ scrollToElement }) => {
-    const scrolling = scrollToElement.scrollToElement;
     
     return (
         <section id='navigation-view'>
@@ -11,10 +10,10 @@ const NavigationView = ({ scrollToElement }) => {
                 <Navbar.Toggle aria-controls='responsive-navbar-nav' />
                 <Navbar.Collapse id='responsive-navbar-nav'>
                     <Nav className='align-items-center'>
-                        <Nav.Link onClick={() => scrolling('aboutElement')}>About Me</Nav.Link>
-                        <Nav.Link onClick={() => scrolling('skillsElement')}>My Work</Nav.Link>
-                        <Nav.Link onClick={() => scrolling('writingElement')}>Writing</Nav.Link>
-                        <Nav.Link onClick={() => scrolling('contactElement')}>Contact</Nav.Link>
+                        <Nav.Link onClick={() => scrollToElement('aboutElement')}>About Me</Nav.Link>
+                        <Nav.Link onClick={() => scrollToElement('workElement')}>My Work</Nav.Link>
+                        <Nav.Link onClick={() => scrollToElement('writingElement')}>Writing</Nav.Link>
+                        <Nav.Link onClick={() => scrollToElement('contactElement')}>Contact</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

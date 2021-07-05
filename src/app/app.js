@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './app.css';
 
+// Helpers
 import { getLocalStorage, setLocalStorage } from '../helperFunctions/localStorage/localStorage';
 
 // Components
@@ -19,6 +20,7 @@ const EnhancedAbout = HOC(About);
 const EnhancedWork = HOC(Work);
 const EnhancedWriting = HOC(Writing);
 const EnhancedContact = HOC(Contact);
+
 
 const App = () => {
   const [showAllComponents, setShowAllComponents] = useState(false);

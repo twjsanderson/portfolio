@@ -1,4 +1,4 @@
-import scrollToElement from './scroll';
+import { scrollToElement } from './scroll/scroll';
 
 const scroll = scrollToElement.scrollToElement;
 

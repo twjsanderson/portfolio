@@ -1,4 +1,4 @@
-const articles = [
+export const articles = [
     { 
         website: 'https://javascript.plainenglish.io/an-introduction-to-queues-and-stacks-in-javascript-efa26203386c', 
         imageLink: 'https://miro.medium.com/max/10256/0*uEc0MhwWRle0jIZ8', 
@@ -41,5 +41,3 @@ const articles = [
         text: 'How to implement a Bubble Sort Algorithm in JavaScript from scratch.' 
     },
 ];
-
-export default { articles };

@@ -6,7 +6,7 @@ import BackgroundVideo from '../../features/ui/backgroundVideo';
 
 // Assets
 import code from '../../assets/video/code.mp4';
-import pdf from '../../assets/Tom_Resume.pdf';
+import pdf from '../../assets/Tom_Sanderson_Resume.pdf';
 
 // Styles
 import './index.css';
@@ -54,7 +54,7 @@ const AboutView = ({ portfolio, showDetails, setShowDetails, scrollToElement }) 
                                         <h4 className='about-content-indent-1'>Education: {'{'}</h4>
                                         <h4 className='about-content-indent-2'>Lighthouse Labs: "Web Development Bootcamp"</h4>
                                         <h4 className='about-content-indent-2'>University of Guelph: "B.A.", </h4>
-                                        <h4 className='about-content-indent-1'>{'},'}</h4>
+                                        <h4 className='about-content-indent-1'>{'}'}</h4>
                                         <h4 className='about-content-indent-1'>Technical Skills: [ "HTML/CSS", "JavaScript", "React", "Express", "PostgreSQL" ]</h4>
                                         <h4 className=''>{'}'}</h4>
                                         <Row>
@@ -63,7 +63,7 @@ const AboutView = ({ portfolio, showDetails, setShowDetails, scrollToElement }) 
                                                 target='_blank'
                                                 href={pdf}
                                             >
-                                                <b>ViewCompleteResume()</b>
+                                                <b>ViewCompleteResume( )</b>
                                             </Button>
                                         </Row>
                                         <Row>
@@ -71,7 +71,7 @@ const AboutView = ({ portfolio, showDetails, setShowDetails, scrollToElement }) 
                                                 onClick={() => scroller('contact')}
                                                 className='about-content-button m-3'
                                             >
-                                                <b>GoToContactForm()</b>
+                                                <b>GoToContactForm( )</b>
                                             </Button>
                                         </Row>
                                     </Col>
