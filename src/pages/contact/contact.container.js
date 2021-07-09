@@ -13,28 +13,28 @@ const Contact = () => {
     const [success, setSuccess] = useState(null);
 
     const handleSubmit = event => {
-        event.preventDefault();
-        const data = { email, message };
-
-        Axios.get('https://us-central1-portfolio-8af66.cloudfunctions.net/sendEmail', {
-            headers: {
-                'Content-Type': 'application/x-www-form-urlencoded'
-            },    
-            data: data
+        Axios.post('https://us-central1-portfolio-8af66.cloudfunctions.net/sendEmail', { 
+            data: {
+                email, 
+                message
+            }
         })
         .then(info => {
-            if (info.status === 200 && info.data.data.message === 'message sent') {
+            console.log(info)
+            if (info.status === 200) {
                 setSuccess(true);
                 setEmail('');
                 setMessage('');
             }
         })
         .catch(error => {
+            console.log(error)
             if (error) {
                 setError(error);
-                setSuccess(false)
+                setSuccess(false);
             } 
         });
+        event.preventDefault();
     };
 
     return (

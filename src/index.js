@@ -11,4 +11,4 @@ if (rootElement) {
     render(<App />, rootElement);
 };
 
-serviceWorker.register();
+serviceWorker.unregister();
