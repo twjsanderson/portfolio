@@ -5,7 +5,7 @@ import './index.css';
 import NavigationView from './navigation.component';
 
 // Helper functions
-import { scrollToElement } from '../../../helperFunctions/scroll/scroll';
+import { scrollToElement } from '../../../helperFunctions/scroll';
 
 const Navigation = () => {
     return (

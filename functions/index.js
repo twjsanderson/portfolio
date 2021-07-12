@@ -7,12 +7,11 @@ admin.initializeApp();
 
 exports.sendEmail = functions.https.onRequest((req, res) => {
     return cors(req, res, () => { 
-    
         const transporter = nodemailer.createTransport({
             service: 'gmail',
-            // host: 'smtp.gmail.com',
-            // port: 465,
-            // secure: true,
+            host: 'smtp.gmail.com',
+            port: 465,
+            secure: true,
             auth: {
                 user: functions.config().sendemail.email,
                 pass: functions.config().sendemail.password
@@ -24,7 +23,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         const message = req.body.data.message;
 
         const mailOptions = {
-            from: email,
+            from: `${email}`,
             to: `tom.w.j.sanderson@gmail.com`,
             subject: 'New message from your Portfolio',
             text: `Email: ${email} \nMessage: ${message}`

@@ -15,7 +15,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStream } from '@fortawesome/free-solid-svg-icons'
 
 const AboutView = ({ portfolio, showDetails, setShowDetails, scrollToElement }) => {
-    const scroller = scrollToElement.scrollToElement;
 
     return (
         <section id='about-view'>
@@ -68,7 +67,7 @@ const AboutView = ({ portfolio, showDetails, setShowDetails, scrollToElement }) 
                                         </Row>
                                         <Row>
                                             <Button
-                                                onClick={() => scroller('contact')}
+                                                onClick={() => scrollToElement('contactElement')}
                                                 className='about-content-button m-3'
                                             >
                                                 <b>GoToContactForm( )</b>

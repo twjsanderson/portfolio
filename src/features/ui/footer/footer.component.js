@@ -21,7 +21,7 @@ const FooterView = (props) => {
                             className='footer-icon' 
                         />
                     </Button>
-                    <Button className='footer-button' href='https://medium.com/@tom.w.j.sanderson'>
+                    <Button className='footer-button' href='https://medium.com/@tom-w-j-sanderson'>
                         <FontAwesomeIcon  
                         icon={faMedium} 
                         className='footer-icon' 

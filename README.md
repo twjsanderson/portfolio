@@ -1,10 +1,6 @@
 ## Tom Sanderson Developer Portfolio
 
-A simple single page portfolio built with React & Firebase Functions (Node.js)
-
-## Screenshot
-
-!["Home"](https://github.com/twjsanderson/portfolio/blob/master/src/assets/images/portfolio.png)
+A simple single page portfolio built with React & Firebase Functions
 
 ### To run this project locally 
 

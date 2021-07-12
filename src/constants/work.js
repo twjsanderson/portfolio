@@ -1,5 +1,5 @@
 
-// Assets
+// Images
 import scrimger_homepage from '../assets/images/scrimger_homepage.png';
 import gcb from '../assets/images/gcb.png';
 import glowinme_portal_home from '../assets/images/glowinme_portal_home.png';
