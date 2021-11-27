@@ -23,32 +23,33 @@ const EnhancedContact = HOC(Contact);
 
 
 const App = () => {
-  const [showAllComponents, setShowAllComponents] = useState(false);
+  // const [showAllComponents, setShowAllComponents] = useState(false);
 
-  useEffect(() => {
-    const localStorage = window.localStorage;
+  // useEffect(() => {
+  //   const localStorage = window.localStorage;
   
-    if (getLocalStorage(localStorage)) {
-        setLocalStorage(localStorage);
-        setShowAllComponents(true);
-    } else {
-      setLocalStorage(localStorage);
-      setTimeout(() => {
-        setShowAllComponents(true);
-      }, 9000);
-    }
+  //   if (getLocalStorage(localStorage)) {
+  //       setLocalStorage(localStorage);
+  //       setShowAllComponents(true);
+  //   } else {
+  //     setLocalStorage(localStorage);
+  //     setTimeout(() => {
+  //       setShowAllComponents(true);
+  //     }, 9000);
+  //   }
 
-  }, [showAllComponents])
+  // }, [showAllComponents])
 
   return (
     <section id='app'>
-      <EnhancedNavigation showAllComponents={showAllComponents} />
+      {/* <EnhancedNavigation showAllComponents={showAllComponents} />
       <Main />
       <EnhancedAbout showAllComponents={showAllComponents} />
       <EnhancedWork showAllComponents={showAllComponents} />
       <EnhancedWriting showAllComponents={showAllComponents} />
       <EnhancedContact showAllComponents={showAllComponents} /> 
-      <Footer />
+      <Footer /> */}
+      <h1>Under Construction</h1>
     </section>
   );
 }

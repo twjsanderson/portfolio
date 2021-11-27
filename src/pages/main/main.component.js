@@ -10,12 +10,10 @@ const MainView = () => {
         <section id='main-view'>
             <Container fluid className='main-container'>
                 <Row>
-                    <Col className='main-title-div'>
-                        <div>
-                            <h1 className='main-title title-name'>Tom <br /> Sanderson</h1>
-                        </div>
+                    <Col className='main-col-1'>
+                        <h1 className='main-title title-name'>Tom <br /> Sanderson</h1>
                     </Col>
-                    <Col className='main-type-col'>
+                    <Col className='main-col-2'>
                         <Typist 
                             cursor={{ show: false }}
                             avgTypingDelay={40}

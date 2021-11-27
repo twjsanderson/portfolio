@@ -23,7 +23,7 @@ exports.sendEmail = functions.https.onRequest((req, res) => {
         const message = req.body.data.message;
 
         const mailOptions = {
-            from: `${email}`,
+            from: email,
             to: `tom.w.j.sanderson@gmail.com`,
             subject: 'New message from your Portfolio',
             text: `Email: ${email} \nMessage: ${message}`
