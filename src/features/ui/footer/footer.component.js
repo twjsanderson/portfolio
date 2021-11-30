@@ -2,9 +2,7 @@ import React from 'react';
 import { Navbar, Nav, Button } from 'react-bootstrap';
 import './index.css';
 
-const FooterView = (props) => {
-    const { FontAwesomeIcon, faGithubSquare, faLinkedin, faMedium } = props;
-
+const FooterView = ({ FontAwesomeIcon, faGithubSquare, faLinkedin, faMedium } ) => {
     return (
         <section id='footer'>
             <Navbar className='footer-container'>

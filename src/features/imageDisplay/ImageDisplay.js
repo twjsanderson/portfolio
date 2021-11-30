@@ -8,15 +8,15 @@ const ImageDisplay = ({ images }) => {
     return (
         images.map((image, index) => {
             return (
-                <Col md={4} className='m-4 image-col' key={index}>
+                <Col md={4} className='m-4' key={index}>
                     <a href={image.website} className=''>
-                        <div className='hover-effect rounded'>
+                        <div className='rounded'>
                         <img 
                             className='img-fluid rounded'
                             src={image.imageLink}
                             alt={image.imgAlt}
                         />
-                        <div className='overlay'>
+                        <div className=''>
                             <h2>{image.title}</h2>
                             <p>{image.text}</p>
                         </div>

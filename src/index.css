@@ -1,17 +1,31 @@
 @import url('https://fonts.googleapis.com/css?family=Consolas|Special+Elite|Montserrat|Droid+Sans+Mono&display=swap');
 
-.title-name {
+/* .title-name {
   font-family: 'Special Elite', serif;
+} */
+
+/* .type-font {
+  font-family: 'Courier', serif;
+} */
+
+/* body {
+  color: white
+} */
+
+/* h1, h4 {
+  font-family: 'Montserrat', serif;
 }
 
-.type-font {
-  font-family: 'Courier', serif !important;
-}
 
-h1 {
+
+h2 {
   font-family: 'Consolas', serif;
+}
+
+h3 {
+  font-family: 'Montserrat', serif;
 }
 
 p {
   font-family: 'Montserrat', serif;
-}
+} */

@@ -1,18 +1,13 @@
 import React from 'react';
-import {} from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 
-// Components 
-import WritingView from './writing.component';
-
-// Constants
+// constants
 import { articles } from '../../constants/writing';
 
 const Writing = () => {
     return (
         <section id='writing'>
-            <WritingView 
-                articles={articles}
-            />
+
         </section>
     )
 };

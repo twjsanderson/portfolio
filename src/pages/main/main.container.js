@@ -1,13 +1,24 @@
 import React from 'react';
+import Typist from 'react-typist';
 
-// Components 
-import MainView from './main.component';
+// styles
+import { Container, Row, Col } from 'react-bootstrap';
+import './index.css'
 
 const Main = () => {
     return (
-        <section id='main'>
-            <MainView />
-        </section>
+        <Container fluid className='main'>
+            <Row>
+                <Col className='m-4'>
+                    <Typist cursor={{ show: false }}>
+                        <h1 className='main-title'>Tom Sanderson</h1>
+                        <h4>Software Developer</h4>
+                        <h4>Content Creator</h4>
+                        <h4>Instructor</h4>
+                    </Typist>
+                </Col>
+            </Row>
+        </Container>
     )
 };
 
