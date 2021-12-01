@@ -10,7 +10,7 @@ const Main = () => {
         <Container fluid className='main'>
             <Row>
                 <Col className='m-4'>
-                    <Typist cursor={{ show: false }}>
+                    <Typist cursor={{ show: false }} avgTypingDelay={30}>
                         <h1 className='main-title'>Tom Sanderson</h1>
                         <h4>Software Developer</h4>
                         <h4>Content Creator</h4>

@@ -25,7 +25,7 @@ const About = () => {
     return (
         <Container fluid className='about'>
             <Row className='d-flex justify-content-center'>
-                <Col md={4} className='mt-2'>
+                <Col md={4} lg={3} className='mt-2'>
                     <Slide right>
                         <Card className='about-card'>
                             <Card.Img 
@@ -36,7 +36,7 @@ const About = () => {
                 </Col>
             </Row>
             <Row className='d-flex justify-content-center'>
-                <Col md={5} className='text-center'>
+                <Col md={6} className='text-center'>
                     <Slide right>
                         <p className='about-text'>
                             My name is Tom and I solve interesting problems with code. 
@@ -67,7 +67,7 @@ const About = () => {
                     {
                         techStack ?
                         <>
-                            <Col md={3}>
+                            <Col md={3} className='d-flex justify-content-center'>
                                 <Fade right cascade>
                                     <Image
                                         className='w-50 m-2'
@@ -81,7 +81,7 @@ const About = () => {
                                     />
                                 </Fade> 
                             </Col> 
-                            <Col md={3}>
+                            <Col md={3} className='d-flex justify-content-center'>
                                 <Fade right cascade>
                                     <Image
                                         className='w-50 m-2'
@@ -95,7 +95,7 @@ const About = () => {
                                     />
                                 </Fade> 
                             </Col>
-                            <Col md={3}>
+                            <Col md={3} className='d-flex justify-content-center'>
                                 <Fade right cascade>
                                     <Image
                                         className='w-50 m-2'
@@ -109,7 +109,7 @@ const About = () => {
                                     />
                                 </Fade> 
                             </Col>
-                            <Col md={3}>
+                            <Col md={3} className='d-flex justify-content-center'>
                                 <Fade right cascade>
                                     <Image
                                         className='w-50 m-2'

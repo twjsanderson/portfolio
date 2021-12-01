@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import './app.css';
 
 // pages
 import Main from '../pages/main';
 import About from '../pages/about';
+import Experience from '../pages/experience';
 
 // components
 import Navigation from '../features/ui/navigation';
@@ -16,6 +17,7 @@ const App = () => {
       <Navigation />
       <Main />
       <About />
+      <Experience />
       <Footer />
     </>
   );

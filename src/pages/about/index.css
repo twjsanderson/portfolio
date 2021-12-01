@@ -1,7 +1,7 @@
 .about {
-    background-color: black;
-    background: linear-gradient(rgb(27, 27, 26), rgb(14, 13, 13), black);
+    background: linear-gradient(rgb(34, 34, 33), rgb(24, 24, 23), rgb(15, 15, 15), black);
     z-index: -999;
+    padding-bottom: 8%;
 }
 
 .about-card {
@@ -9,6 +9,5 @@
 }
 
 .about-text {
-    font-size: 1rem;
     line-height: 1.8rem;
 }
