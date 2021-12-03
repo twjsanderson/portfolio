@@ -7,31 +7,35 @@ import zenduit from '../assets/images/zenduit.png';
 
 export const projects = [
     { 
+        id: 1,
         website: 'https://glowinme.com/', 
         imageLink: glowinme_portal_home, 
         imgAlt: 'GlowinMe Portal', 
-        title: 'GlowinMe', 
-        text: 'A private portal where staff members can clean and review product data from their Firestore database. Built with React, Redux &amp; Algolia.' 
+        title: 'Data Cleaning Portal', 
+        text: 'A private portal where staff members can clean and review product data from their Firestore database. Built with React, Redux & Algolia.' 
     },
     { 
+        id: 2,
         website: 'https://www.scrimger.ca/', 
         imageLink: scrimger_homepage, 
         imgAlt: 'Richard Scrimger website', 
-        title: 'Richard Scrimger', 
-        text: 'A custom built website, with JavaScript powered animations, designed for Canadian author, Richard Scrimger.' 
+        title: 'Portfolio Website', 
+        text: 'A custom built portfolio with JavaScript powered animations. I designed this website from scratch for Canadian author, Richard Scrimger.' 
     },
     { 
+        id: 3,
         website: 'https://candidly.me/', 
         imageLink: candidly, 
         imgAlt: 'Candidly App', 
-        title: 'Candidly', 
-        text: 'Wrote over 100 multiple choice questions about the React library that are actively being used in the Candidly app to assess the knowledge of software developer at various skill levels.' 
+        title: 'Candidly Quiz Questions', 
+        text: 'I wrote over 100 multiple choice questions about the React library that are actively being used in the Candidly app to assess the knowledge of software developers at various skill levels.' 
     },
     { 
+        id: 4,
         website: 'https://zenduit.com/', 
         imageLink: zenduit, 
         imgAlt: 'ZenduIt Home', 
-        title: 'ZenduIt', 
+        title: 'Custom API', 
         text: 'As a junior developer I built a stand alone API in TypeScript that connected IoT devices to a custom client dashboard with real time updates.' 
     },
 
