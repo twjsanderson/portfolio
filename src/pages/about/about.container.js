@@ -63,71 +63,74 @@ const About = () => {
                     }
                 </Col>
             </Row>
-            <Row className='text-center mt-5'>
-                    {
-                        techStack ?
-                        <>
-                            <Col md={3} className='d-flex justify-content-center'>
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={javascript} 
-                                    />
-                                </Fade> 
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={typescript} 
-                                    />
-                                </Fade> 
-                            </Col> 
-                            <Col md={3} className='d-flex justify-content-center'>
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={react} 
-                                    />
-                                </Fade> 
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={node} 
-                                    />
-                                </Fade> 
-                            </Col>
-                            <Col md={3} className='d-flex justify-content-center'>
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={psql} 
-                                    />
-                                </Fade> 
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={firebase} 
-                                    />
-                                </Fade> 
-                            </Col>
-                            <Col md={3} className='d-flex justify-content-center'>
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={git} 
-                                    />
-                                </Fade> 
-                                <Fade right cascade>
-                                    <Image
-                                        className='w-50 m-2'
-                                        src={npm} 
-                                    />
-                                </Fade>
-                            </Col>
+            
+            <Container>
+                <Row className='text-center mt-5'>
+                        {
+                            techStack ?
+                            <>
+                                <Col md={3} className='d-flex justify-content-center'>
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={javascript} 
+                                        />
+                                    </Fade> 
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={typescript} 
+                                        />
+                                    </Fade> 
+                                </Col> 
+                                <Col md={3} className='d-flex justify-content-center'>
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={react} 
+                                        />
+                                    </Fade> 
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={node} 
+                                        />
+                                    </Fade> 
+                                </Col>
+                                <Col md={3} className='d-flex justify-content-center'>
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={psql} 
+                                        />
+                                    </Fade> 
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={firebase} 
+                                        />
+                                    </Fade> 
+                                </Col>
+                                <Col md={3} className='d-flex justify-content-center'>
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={git} 
+                                        />
+                                    </Fade> 
+                                    <Fade right cascade>
+                                        <Image
+                                            className='w-50 m-2'
+                                            src={npm} 
+                                        />
+                                    </Fade>
+                                </Col>
 
-                        </>:
-                                null
-                    }
-            </Row>
+                            </>:
+                                    null
+                        }
+                </Row>
+            </Container>
         </Container>
     )
 };
