@@ -5,7 +5,7 @@ import Fade from 'react-reveal/Fade';
 import { projects } from '../../constants';
 
 // styles
-import { Container, Row, Col, Carousel, Button } from 'react-bootstrap';
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import './index.css'
 
 const Experience = () => {
@@ -22,7 +22,7 @@ const Experience = () => {
             </Row>
             <Row>
                 <Col className='d-flex justify-content-center' >
-                    <Carousel className='w-75' onSlide={(index) => setCurrentSlideIndex(index)}>
+                    <Carousel className='w-50' onSlide={(index) => setCurrentSlideIndex(index)}>
                         {
                             projects.map((project, index) => {
                                 return <Carousel.Item key={index}>

@@ -5,6 +5,7 @@ import './app.css';
 import Main from '../pages/main';
 import About from '../pages/about';
 import Experience from '../pages/experience';
+import Writing from '../pages/writing';
 
 // components
 import Navigation from '../features/ui/navigation';
@@ -18,6 +19,7 @@ const App = () => {
       <Main />
       <About />
       <Experience />
+      <Writing />
       <Footer />
     </>
   );
