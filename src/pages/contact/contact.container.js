@@ -14,7 +14,7 @@ const Contact = () => {
             </Row>
             <Row>
                 <Col className='d-flex justify-content-center my-3'>
-                    <h5>Connect with me on one of the following plaforms</h5>
+                    <h5>Connect with me on one of the following platforms</h5>
                 </Col>
             </Row>
         </>
