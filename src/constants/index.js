@@ -4,6 +4,9 @@ import scrimger_homepage from '../assets/images/scrimger_homepage.png';
 import glowinme_portal_home from '../assets/images/glowinme_portal_home.png';
 import candidly from '../assets/images/candidly.png';
 import zenduit from '../assets/images/zenduit.png';
+import heap from '../assets/images/heap.jpg';
+import bubbles from '../assets/images/bubbles.jpg';
+import merge from '../assets/images/merge.jpg';
 
 export const projects = [
     { 
@@ -43,44 +46,27 @@ export const projects = [
 
 export const articles = [
     { 
-        website: 'https://javascript.plainenglish.io/an-introduction-to-queues-and-stacks-in-javascript-efa26203386c', 
-        imageLink: null, 
-        imgAlt: 'Intro to Queues and Stacks', 
-        title: 'An Introduction to Queues and Stacks in JavaScript', 
-        text: 'A beginners guide to using Queue and Stack data structures in your code.' 
-    },
-    { 
-        website: 'https://medium.com/@tom.w.j.sanderson/a-practical-guide-to-technical-tests-for-junior-devs-part-1-7890b5689c0', 
-        imageLink: null, 
-        imgAlt: 'Technical Test Guide part I', 
-        title: 'A Practical Guide to Technical Tests (For Junior Devs): Part I', text: 'Part I of a guide that teaches junior developers how to approach technical tests and solve coding problems.' 
-    },
-    { 
-        website: 'https://tom-w-j-sanderson.medium.com/a-practical-guide-to-technical-tests-for-junior-devs-part-ii-7fec105d1528', 
-        imageLink: null, 
-        imgAlt: 'Technical Test Guide part II', 
-        title: 'A Practical Guide to Technical Tests (For Junior Devs): Part II', 
-        text: 'Part II of a guide that teaches junior developers how to approach technical tests and solve coding problems.' 
-    },
-    { 
+        id: 1,
         website: 'https://levelup.gitconnected.com/heap-sort-algorithm-101-dec2aefb0b11', 
-        imageLink: null, 
+        image: heap, 
         imgAlt: 'Heap Sort Algorithm', 
         title: 'Heap Sort Algorithm 101', 
-        text: 'How to implement a Heap Sort Algorithm in JavaScript from scratch.' 
+        text: 'I’ll be honest, for any Junior Developers who are not familiar with Binary Search Trees, Max/Min Heaps, and other related concepts, this gonna be a pretty intense walkthrough. The ultimate goal of the Heap Sort Algorithm is to sort a list of values using a Max or Min heap...' 
     },
     { 
+        id: 2,
         website: 'https://medium.com/swlh/merge-sort-algorithm-101-c4fdea276289', 
-        imageLink: null, 
+        image: merge, 
         imgAlt: 'Merge Sort Algorithm', 
         title: 'Merge Sort Algorithm 101', 
-        text: 'How to implement a Merge Sort Algorithm in JavaScript from scratch.' 
+        text: 'The first function we are going to focus on is the actual MergeSort function that breaks down the initial unsorted array into smaller pieces. Then we will build out a merge function to stitch the arrays back together in sorted order...' 
     },
     { 
+        id: 3,
         website: 'https://levelup.gitconnected.com/bubble-sort-algorithm-101-b1864d5b509f', 
-        imageLink: null, 
+        image: bubbles, 
         imgAlt: 'Bubble Sort Algorithm', 
         title: 'Bubble Sort Algorithm 101', 
-        text: 'How to implement a Bubble Sort Algorithm in JavaScript from scratch.' 
+        text: 'The BSA works by comparing each element in an array to its immediate (adjacent neighbour) to determine which one is greater. The larger of the two elements ends up on the right and the smaller element ends up on the left. This process is repeated...' 
     },
 ];

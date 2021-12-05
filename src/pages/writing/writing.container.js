@@ -1,24 +1,44 @@
 import React from 'react';
-import { Container, Card, Button } from 'react-bootstrap';
+import Slide from 'react-reveal/Slide';
 
 // constants
 import { articles } from '../../constants';
 
+// styles
+import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import './index.css';
+
 const Writing = () => {
     return (
-        <section id='writing'>
-            <Card style={{ width: '18rem' }}>
-                <Card.Img variant="top" src={articles[0].website} />
-                <Card.Body>
-                    <Card.Title>Card Title</Card.Title>
-                    <Card.Text>
-                    Some quick example text to build on the card title and make up the bulk of
-                    the card's content.
-                    </Card.Text>
-                    <Button variant="primary">Go somewhere</Button>
-                </Card.Body>
-            </Card>
-        </section>
+        <Container className='writing'>
+            <Row>
+                <Col className='d-flex justify-content-center text-center mb-3'>
+                    <Slide right cascade>
+                        <h3>My Writing</h3>
+                    </Slide>
+                </Col>
+            </Row>
+            <Row>
+                {
+                    articles.map(article => {
+                        return (
+                            <Col key={article.id}  className='d-flex justify-content-center'>
+                                <Slide right cascade>
+                                    <Card className='my-3 writing-card'>
+                                        <Card.Img variant='top' src={article.image} alt={article.imgAlt} />
+                                        <Card.Body>
+                                            <Card.Title>{article.title}</Card.Title>
+                                            <Card.Text>{article.text}</Card.Text>
+                                            <Button variant='danger' onClick={() => window.open(article.website)}>Read Article</Button>
+                                        </Card.Body>
+                                    </Card>
+                                </Slide>
+                            </Col>
+                        )
+                    })
+                }
+            </Row>
+        </Container>
     )
 };
 

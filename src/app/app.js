@@ -10,6 +10,7 @@ import Writing from '../pages/writing';
 // components
 import Navigation from '../features/ui/navigation';
 import Footer from '../features/ui/footer';
+import Contact from '../pages/contact/contact.container';
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
       <About />
       <Experience />
       <Writing />
+      <Contact />
       <Footer />
     </>
   );
