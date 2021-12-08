@@ -31,7 +31,7 @@ export const projects = [
         imageLink: candidly, 
         imgAlt: 'Candidly App', 
         title: 'Candidly Quiz Questions', 
-        text: 'I wrote over 100 multiple choice questions about the React library that are actively being used in the Candidly app to assess the knowledge of software developers at various skill levels.' 
+        text: 'I wrote over 100 multiple choice questions about the React library that are used to test the knowledge of software developers.' 
     },
     { 
         id: 4,

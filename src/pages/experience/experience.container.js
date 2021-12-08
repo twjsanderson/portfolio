@@ -10,7 +10,6 @@ import './index.css'
 
 const Experience = () => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
-    
     return (
         <Container fluid className='experience'>
             <Row>
@@ -27,7 +26,7 @@ const Experience = () => {
                             projects.map((project, index) => {
                                 return <Carousel.Item key={index}>
                                     <img
-                                        className='d-block w-100'
+                                        className='experience-img d-block w-100'
                                         src={project.imageLink}
                                         alt={project.imgAlt}
                                     />

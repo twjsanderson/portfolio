@@ -1,0 +1,89 @@
+[debug] [2021-12-05T03:36:51.153Z] ----------------------------------------------------------------------
+[debug] [2021-12-05T03:36:51.154Z] Command:       /home/tom/.nvm/versions/node/v16.5.0/bin/node /home/tom/.nvm/versions/node/v16.5.0/bin/firebase deploy
+[debug] [2021-12-05T03:36:51.155Z] CLI Version:   9.23.0
+[debug] [2021-12-05T03:36:51.155Z] Platform:      linux
+[debug] [2021-12-05T03:36:51.155Z] Node Version:  v16.5.0
+[debug] [2021-12-05T03:36:51.155Z] Time:          Sat Dec 04 2021 22:36:51 GMT-0500 (Eastern Standard Time)
+[debug] [2021-12-05T03:36:51.155Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-05T03:36:51.166Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-12-05T03:36:51.249Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-05T03:36:51.250Z] > authorizing via signed-in user (tom.w.j.sanderson@gmail.com)
+[debug] [2021-12-05T03:36:51.250Z] [iam] checking project portfolio-8af66 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-12-05T03:36:51.251Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-05T03:36:51.251Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-05T03:36:51.561Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-12-05T03:36:51.561Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-12-05T03:36:51.578Z] <<< HTTP RESPONSE 200 {"date":"Sun, 05 Dec 2021 03:36:51 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:36:51.600Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-8af66:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-12-05T03:36:52.072Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Dec 2021 03:36:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=166","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:36:52.073Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/portfolio-8af66/serviceAccounts/portfolio-8af66@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-12-05T03:36:52.642Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Dec 2021 03:36:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:36:52.643Z] > refreshing access token with scopes: []
+[debug] [2021-12-05T03:36:52.643Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-05T03:36:52.847Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Sun, 05 Dec 2021 03:36:53 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:36:52.864Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-8af66 [none]
+[debug] [2021-12-05T03:36:53.370Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-8af66 200
+[debug] [2021-12-05T03:36:53.370Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-8af66 {"projectId":"portfolio-8af66","projectNumber":"53339562650","displayName":"portfolio","name":"projects/portfolio-8af66","resources":{"hostingSite":"portfolio-8af66","realtimeDatabaseInstance":"portfolio-8af66"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'portfolio-8af66'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2021-12-05T03:36:53.707Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:370:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:1172:7)
+    at Config.path (/home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/config.js:115:45)
+    at getChildEnvironment (/home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:50:49)
+    at runTargetCommands (/home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:71:14)
+    at /home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:122:24
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-12-05T03:37:14.159Z] ----------------------------------------------------------------------
+[debug] [2021-12-05T03:37:14.161Z] Command:       /home/tom/.nvm/versions/node/v16.5.0/bin/node /home/tom/.nvm/versions/node/v16.5.0/bin/firebase deploy
+[debug] [2021-12-05T03:37:14.161Z] CLI Version:   9.23.0
+[debug] [2021-12-05T03:37:14.161Z] Platform:      linux
+[debug] [2021-12-05T03:37:14.161Z] Node Version:  v16.5.0
+[debug] [2021-12-05T03:37:14.162Z] Time:          Sat Dec 04 2021 22:37:14 GMT-0500 (Eastern Standard Time)
+[debug] [2021-12-05T03:37:14.162Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2021-12-05T03:37:14.202Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-12-05T03:37:14.203Z] > authorizing via signed-in user (tom.w.j.sanderson@gmail.com)
+[debug] [2021-12-05T03:37:14.203Z] [iam] checking project portfolio-8af66 for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-12-05T03:37:14.205Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-12-05T03:37:14.205Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-05T03:37:14.481Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Sun, 05 Dec 2021 03:37:14 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:37:14.496Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/portfolio-8af66:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-12-05T03:37:14.883Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Dec 2021 03:37:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=163","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:37:14.884Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/portfolio-8af66/serviceAccounts/portfolio-8af66@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-12-05T03:37:15.300Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Sun, 05 Dec 2021 03:37:15 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:37:15.301Z] > refreshing access token with scopes: []
+[debug] [2021-12-05T03:37:15.301Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-12-05T03:37:15.515Z] <<< HTTP RESPONSE 200 {"date":"Sun, 05 Dec 2021 03:37:15 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3=\":443\"; ma=2592000,h3-29=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-12-05T03:37:15.530Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-8af66 [none]
+[debug] [2021-12-05T03:37:16.032Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-8af66 200
+[debug] [2021-12-05T03:37:16.032Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-8af66 {"projectId":"portfolio-8af66","projectNumber":"53339562650","displayName":"portfolio","name":"projects/portfolio-8af66","resources":{"hostingSite":"portfolio-8af66","realtimeDatabaseInstance":"portfolio-8af66"},"state":"ACTIVE"}
+[info] 
+[info] === Deploying to 'portfolio-8af66'...
+[info] 
+[info] i  deploying functions, hosting 
+[debug] [2021-12-05T03:37:16.374Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at new NodeError (node:internal/errors:370:5)
+    at validateString (node:internal/validators:119:11)
+    at Object.join (node:path:1172:7)
+    at Config.path (/home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/config.js:115:45)
+    at getChildEnvironment (/home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:50:49)
+    at runTargetCommands (/home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:71:14)
+    at /home/tom/.nvm/versions/node/v16.5.0/lib/node_modules/firebase-tools/lib/deploy/lifecycleHooks.js:122:24
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: An unexpected error has occurred.
