@@ -5,7 +5,7 @@ import Slide from 'react-reveal/Slide';
 import { articles } from '../../constants';
 
 // styles
-import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Button, Image } from 'react-bootstrap';
 import './index.css';
 
 const Writing = () => {
@@ -30,7 +30,20 @@ const Writing = () => {
                             return (
                                 <Col key={article.id} className='d-flex justify-content-center'>
                                     <Slide right cascade>
-                                        <p onClick={() => setShowPanel(prevState => prevState === null ? article.id : null)}>{article.title}</p>
+                                            <div 
+                                                className='thumbnail' 
+                                                onClick={() => setShowPanel(prevState => prevState === null ? article.id : null)}>
+                                                <Image 
+                                                    className='img' 
+                                                    src={article.image} 
+                                                    alt={article.imgAlt} 
+                                                />
+                                                <div className='caption'>
+                                                    <p>contacto@windberg.cl</p>
+                                                    <p>+56983874071   |   +56228231294</p>
+                                                    <p>El Aguilucho 3174, Providencia, Región Metropolitana</p>
+                                                </div>
+                                            </div>
                                     </Slide>
                                 </Col>
                             )
