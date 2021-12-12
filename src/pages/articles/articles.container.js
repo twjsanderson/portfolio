@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import Slide from 'react-reveal/Slide';
 import { Element } from 'react-scroll';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTimesCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
+import { faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // constants
 import { articles } from '../../constants';
