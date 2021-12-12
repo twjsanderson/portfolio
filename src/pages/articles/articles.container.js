@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import Slide from 'react-reveal/Slide';
 import { Element } from 'react-scroll';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTimesCircle, faTimes } from '@fortawesome/free-solid-svg-icons';
 
 // constants
 import { articles } from '../../constants';
@@ -70,6 +72,19 @@ const Articles = () => {
                                             >
                                                 {article.title}
                                             </h4>
+                                            {
+                                                showPanel !== null ?
+                                                    <FontAwesomeIcon  
+                                                        icon={faTimes} 
+                                                        className='articles-exit-icon'
+                                                        onClick={() => {
+                                                            return showPanel === null ? 
+                                                                setShowPanel(article.id) : 
+                                                                    setShowPanel(null)
+                                                        }}
+                                                    /> :
+                                                        null
+                                            }
                                             {
                                                 showPanel !== null ?
                                                     <>

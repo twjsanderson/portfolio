@@ -31,12 +31,13 @@ const Contact = () => {
                     contacts.map(contact => {
                         return (
                             <Col key={contact.id} className='d-flex justify-content-center mt-3'>
-                                    <FontAwesomeIcon  
-                                        icon={contact.icon} 
-                                        className='contact-icon' 
-                                        onMouseEnter={() => setShowIcon(contact.id)}
-                                        onMouseLeave={() => setShowIcon(null)}
-                                    />
+                                <FontAwesomeIcon  
+                                    icon={contact.icon} 
+                                    className='contact-icon' 
+                                    onMouseEnter={() => setShowIcon(contact.id)}
+                                    onMouseLeave={() => setShowIcon(null)}
+                                    onClick={() => window.open(contact.link, '_blank')}
+                                />
                             </Col>
                         )
                     })

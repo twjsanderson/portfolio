@@ -78,10 +78,19 @@
 
 .articles-text {
     position: absolute;
+    cursor: pointer;
     color: white; 
     font-size: 1.1rem;
     top: 35%;
     left: 50%;
+    transform: translateX(-50%);
+}
+
+.articles-exit-icon {
+    position: absolute;
+    cursor: pointer;
+    top: 15%;
+    left: 77%;
     transform: translateX(-50%);
 }
 

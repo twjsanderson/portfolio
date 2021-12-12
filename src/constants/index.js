@@ -104,7 +104,7 @@ export const contacts = [
     {
         id: 1,
         icon: faEnvelope,
-        link: 'https://github.com/twjsanderson',
+        link: 'mailto:tom.w.j.sanderson@gmail.com',
         text: 'Send me an email and setup a time to chat'
     },
     {
