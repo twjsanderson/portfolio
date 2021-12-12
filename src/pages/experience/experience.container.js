@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Slide from 'react-reveal/Slide';
+import { Element } from 'react-scroll';
 
 // assets
 import { projects } from '../../constants';
@@ -12,6 +13,7 @@ const Experience = () => {
     const [currentSlideIndex, setCurrentSlideIndex] = useState(0);
     return (
         <Container fluid className='experience'>
+            <Element name='workElement' />
             <Row>
                 <Col className='d-flex justify-content-center text-center mb-4'>
                     <Slide right cascade>

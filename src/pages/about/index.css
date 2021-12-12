@@ -1,6 +1,7 @@
 .about {
     background: linear-gradient(rgb(34, 34, 33), rgb(24, 24, 23), rgb(15, 15, 15), black);
     z-index: -999;
+    padding-top: 8%;
     padding-bottom: 8%;
 }
 
@@ -9,5 +10,11 @@
 }
 
 .about-text {
-    line-height: 1.8rem;
+    line-height: 1.7;
+}
+
+@media only screen and (max-width: 1024px) {
+    .about-text {
+        font-size: 1.1rem;
+    }
 }

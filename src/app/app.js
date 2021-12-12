@@ -5,12 +5,12 @@ import './app.css';
 import Main from '../pages/main';
 import About from '../pages/about';
 import Experience from '../pages/experience';
-import Writing from '../pages/writing';
-
-// components
-import Navigation from '../features/ui/navigation';
-import Footer from '../features/ui/footer';
+import Articles from '../pages/articles';
 import Contact from '../pages/contact/contact.container';
+
+// features
+import Navigation from '../features/ui/navigation';
+
 
 const App = () => {
 
@@ -20,9 +20,8 @@ const App = () => {
       <Main />
       <About />
       <Experience />
-      <Writing />
+      <Articles />
       <Contact />
-      <Footer />
     </>
   );
 }

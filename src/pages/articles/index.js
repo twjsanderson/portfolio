@@ -1,0 +1,1 @@
+export { default } from './articles.container.js';
