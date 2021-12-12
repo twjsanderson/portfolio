@@ -14,37 +14,32 @@ const Writing = () => {
     return (
         <Container className='writing'>
             <Row>
-                <Col className='d-flex justify-content-center text-center mb-3'>
+                <Col className='d-flex justify-content-center text-center mb-4'>
                     <Slide right cascade>
                         <h3>My Writing</h3>
                     </Slide>
                 </Col>
             </Row>
-            <Row>
+            <Row className='text-center mb-4'>
                 {
                     articles
                         .filter(article => {
-                            return showPanel === null || article.id === showPanel
+                            return (showPanel === null || article.id === showPanel)
                         })
                         .map(article => {
                             return (
-                                <Col key={article.id} className='d-flex justify-content-center'>
-                                    <Slide right cascade>
-                                            <div 
-                                                className='thumbnail' 
-                                                onClick={() => setShowPanel(prevState => prevState === null ? article.id : null)}>
-                                                <Image 
-                                                    className='img' 
-                                                    src={article.image} 
-                                                    alt={article.imgAlt} 
-                                                />
-                                                <div className='caption'>
-                                                    <p>contacto@windberg.cl</p>
-                                                    <p>+56983874071   |   +56228231294</p>
-                                                    <p>El Aguilucho 3174, Providencia, Región Metropolitana</p>
-                                                </div>
-                                            </div>
-                                    </Slide>
+                                <Col 
+                                    md={showPanel === null ? 4 : null} 
+                                    className='d-flex justify-content-center' 
+                                    key={article.id}
+                                    onClick={() => showPanel === null ? setShowPanel(article.id) : setShowPanel(null)} 
+                                >
+                                    <Image
+                                        className={showPanel === null ? 'writing-img-grid' : 'writing-img-single'}
+                                        src={article.image} 
+                                        alt={article.imgAlt} 
+                                    />
+                                    <h4 className='writing-title'>{article.title}</h4>
                                 </Col>
                             )
                         })

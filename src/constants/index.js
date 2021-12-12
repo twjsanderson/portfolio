@@ -69,4 +69,28 @@ export const articles = [
         title: 'Bubble Sort Algorithm 101', 
         text: 'The BSA works by comparing each element in an array to its immediate (adjacent neighbour) to determine which one is greater. The larger of the two elements ends up on the right and the smaller element ends up on the left. This process is repeated...' 
     },
+    { 
+        id: 4,
+        website: 'https://levelup.gitconnected.com/heap-sort-algorithm-101-dec2aefb0b11', 
+        image: heap, 
+        imgAlt: 'Heap Sort Algorithm', 
+        title: 'Heap Sort Algorithm 101', 
+        text: 'I’ll be honest, for any Junior Developers who are not familiar with Binary Search Trees, Max/Min Heaps, and other related concepts, this gonna be a pretty intense walkthrough. The ultimate goal of the Heap Sort Algorithm is to sort a list of values using a Max or Min heap...' 
+    },
+    { 
+        id: 5,
+        website: 'https://medium.com/swlh/merge-sort-algorithm-101-c4fdea276289', 
+        image: merge, 
+        imgAlt: 'Merge Sort Algorithm', 
+        title: 'Merge Sort Algorithm 101', 
+        text: 'The first function we are going to focus on is the actual MergeSort function that breaks down the initial unsorted array into smaller pieces. Then we will build out a merge function to stitch the arrays back together in sorted order...' 
+    },
+    { 
+        id: 6,
+        website: 'https://levelup.gitconnected.com/bubble-sort-algorithm-101-b1864d5b509f', 
+        image: bubbles, 
+        imgAlt: 'Bubble Sort Algorithm', 
+        title: 'Bubble Sort Algorithm 101', 
+        text: 'The BSA works by comparing each element in an array to its immediate (adjacent neighbour) to determine which one is greater. The larger of the two elements ends up on the right and the smaller element ends up on the left. This process is repeated...' 
+    },
 ];
