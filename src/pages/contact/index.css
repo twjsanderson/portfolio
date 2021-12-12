@@ -1,0 +1,16 @@
+.contact {
+    background: linear-gradient(black, rgb(15, 15, 15), rgb(24, 24, 23), rgb(34, 34, 33));
+    z-index: -999;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.contact-icon {
+    font-size: 3rem;
+    margin: 0.3em;
+    cursor: pointer;
+}
+
+.contact-icon-text {
+    margin-top: 1em;
+}

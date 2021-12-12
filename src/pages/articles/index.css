@@ -1,0 +1,121 @@
+.articles {
+    background: linear-gradient(rgb(34, 34, 33), rgb(24, 24, 23), rgb(15, 15, 15), black);
+    z-index: -999;
+    padding-top: 8%;
+    padding-bottom: 8%;
+}
+
+.articles-card {
+    width: 18rem;
+    background-color: white; 
+    color: black;
+}
+
+.articles-img-grid {
+    width: 100%;
+    margin: 1%;
+    padding: 5%;
+    cursor: pointer;
+    opacity: 0.3;
+    -webkit-filter: blur(1.5px); 
+    -moz-filter: blur(1.5px); 
+    -o-filter: blur(1.5px); 
+    -ms-filter: blur(1.5px); 
+    filter: blur(1.5px); 
+}
+
+.articles-img-single {
+    width: 70%;
+    margin: 1%;
+    padding: 5%;
+    cursor: pointer;
+    opacity: 0.4;
+    -webkit-filter: blur(2px); 
+    -moz-filter: blur(2px); 
+    -o-filter: blur(2px); 
+    -ms-filter: blur(2px); 
+    filter: blur(2px); 
+}
+
+.articles-title-grid {
+    position: absolute;
+    cursor: pointer;
+    color: white; 
+    font-size: 1.3rem;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.6s;
+}
+
+.articles-title-grid:hover {
+    text-shadow: 0.5px 1px 2px white;
+    transition: 0.6s;
+}
+
+.articles-title-single {
+    position: absolute;
+    cursor: pointer;
+    color: white; 
+    font-weight: 800;
+    text-shadow: 0px 0px 1px white;
+    font-size: 1.7rem;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.articles-title-grid {
+    position: absolute;
+    cursor: pointer;
+    color: white; 
+    font-size: 1.3rem;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: 0.6s;
+}
+
+.articles-text {
+    position: absolute;
+    color: white; 
+    font-size: 1.1rem;
+    top: 35%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.articles-button {
+    position: absolute;
+    cursor: pointer;
+    color: white; 
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+@media only screen and (max-width: 1200px) {
+    .articles-title-grid {
+        position: absolute;
+        cursor: pointer;
+        color: white; 
+        font-size: 1rem;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: 0.6s;
+    }
+
+    .articles-title-single {
+        position: absolute;
+        cursor: pointer;
+        color: white; 
+        font-weight: 800;
+        text-shadow: 0px 0px 1px white;
+        font-size: 1.1rem;
+        top: 20%;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+  }

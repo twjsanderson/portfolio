@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Slide from 'react-reveal/Slide';
 import Fade from 'react-reveal/Fade';
+import { Element } from 'react-scroll';
 
 // assets
 import profile from '../../assets/images/profile.jpg';
@@ -24,8 +25,9 @@ const About = () => {
 
     return (
         <Container fluid className='about'>
+            <Element name='aboutElement' />
             <Row className='d-flex justify-content-center'>
-                <Col md={4} lg={3} className='mt-2'>
+                <Col sm={6} md={4} lg={3} className='mt-2'>
                     <Slide right>
                         <Card className='about-card'>
                             <Card.Img 

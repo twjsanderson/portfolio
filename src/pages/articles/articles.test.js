@@ -1,12 +1,12 @@
 import React from 'react';
-import Writing from './writing.container';
+import Articles from './articles.container';
 import { shallow, mount } from 'enzyme';
 
-describe('Writing component rendering ability', () => {
+describe('Articles component rendering ability', () => {
   it('renders without crashing', () => {
-    shallow(<Writing />);
+    shallow(<Articles />);
    });
    it('renders component and its children without crashing', () => {
-    mount(<Writing />);
+    mount(<Articles />);
   });
 });
